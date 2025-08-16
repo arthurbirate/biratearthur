@@ -9,22 +9,27 @@
 
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
       {% for project in projects %}
-      <a href="{% url 'project_detail' project.pk %}" 
-         class="block bg-white rounded-xl shadow-md p-6 group transition-all duration-300 transform hover:-translate-y-2 hover:scale-105 hover:shadow-2xl hover:bg-emerald-100">
+      <div class="bg-white rounded-xl shadow-md p-6 transition-all duration-300 hover:shadow-lg">
         
         <!-- Project Title -->
-        <h2 class="text-lg font-semibold text-emerald-700 transition-colors duration-300 group-hover:text-emerald-900">
+        <h2 class="text-lg font-semibold text-emerald-700 mb-3">
           {{ project.title }}
         </h2>
 
         <!-- Optional: Show technologies preview -->
         {% if project.technologies_used %}
-        <p class="mt-2 text-sm text-gray-600 line-clamp-2">
+        <p class="text-sm text-gray-600 mb-4 line-clamp-2">
           {{ project.technologies_used }}
         </p>
         {% endif %}
-      
-      </a>
+
+        <!-- Details Button -->
+        <a href="{% url 'project_detail' project.pk %}" 
+           class="inline-block bg-emerald-600 text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-emerald-700 transition">
+          View Details →
+        </a>
+
+      </div>
       {% endfor %}
     </div>
 
