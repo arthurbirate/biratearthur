@@ -10,12 +10,12 @@
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
       {% for project in projects %}
       <a href="{{ project.link }}" 
-         class="block bg-white rounded-xl shadow-md p-6 group transform transition duration-300 hover:-translate-y-1 hover:shadow-xl hover:bg-emerald-50">
+         class="block bg-white rounded-xl shadow-md p-6 group transition-all duration-300 transform hover:-translate-y-2 hover:scale-105 hover:shadow-2xl hover:bg-emerald-100">
         
-        <h2 class="text-lg font-semibold text-emerald-700 group-hover:text-emerald-900">
+        <h2 class="text-lg font-semibold text-emerald-700 transition-colors duration-300 group-hover:text-emerald-900">
           {{ project.title }}
         </h2>
-        <p class="text-sm text-gray-600 mt-2">
+        <p class="text-sm text-gray-600 mt-2 transition-colors duration-300 group-hover:text-gray-800">
           <strong>Course:</strong> {{ project.project_type }}
         </p>
       </a>
