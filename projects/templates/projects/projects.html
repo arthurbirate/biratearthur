@@ -9,10 +9,15 @@
 
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
       {% for project in projects %}
-      <a href="{{ project.link }}" class="block bg-white rounded-xl shadow hover:shadow-lg transition duration-300 p-6 group">
-        <h2 class="text-lg font-semibold text-emerald-700 group-hover:text-emerald-900">{{ project.title }}</h2>
-        <p class="text-sm text-gray-600 mt-2"><strong>Type:</strong> {{ project.project_type }}</p>
-        <p class="text-sm text-gray-600"><strong>Tool:</strong> {{ project.tool_used }}</p>
+      <a href="{{ project.link }}" 
+         class="block bg-white rounded-xl shadow-md p-6 group transform transition duration-300 hover:-translate-y-1 hover:shadow-xl hover:bg-emerald-50">
+        
+        <h2 class="text-lg font-semibold text-emerald-700 group-hover:text-emerald-900">
+          {{ project.title }}
+        </h2>
+        <p class="text-sm text-gray-600 mt-2">
+          <strong>Course:</strong> {{ project.project_type }}
+        </p>
       </a>
       {% endfor %}
     </div>
