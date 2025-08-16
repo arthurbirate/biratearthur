@@ -41,3 +41,7 @@ def edit_project(request, pk):
         form = ProjectForm(instance=project) 
 
     return render(request, 'projects/edit_project.html', {'form': form, 'project': project})
+
+def project_detail(request, pk):
+    project = get_object_or_404(Project, pk=pk)
+    return render(request, 'project.html', {'project': project})
