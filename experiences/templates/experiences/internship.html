@@ -5,32 +5,36 @@
 <div class="w-full bg-gradient-to-br from-blue-50 via-white to-emerald-100 py-16 px-6 font-serif">
   <div class="max-w-4xl mx-auto space-y-16">
 
-    <!-- Header & Document Buttons -->
+    <!-- Header & Company Details -->
     <div class="space-y-4">
       <h1 class="text-4xl sm:text-5xl font-extrabold text-teal-700">{{ internship.title }}</h1>
-      <p class="text-lg sm:text-xl text-gray-600">{{ internship.subtitle }}</p>
-      <div class="flex flex-wrap gap-4 mt-2">
-        <a href="{% static 'docs/projectPlan.pdf' %}" download
-           class="bg-teal-600 hover:bg-teal-700 text-white font-semibold px-6 py-3 rounded-full shadow-md transition">
-           Project Plan
-        </a>
-        <a href="{% static 'docs/Birate_Kabanza_Arthur_realization_document_VGP.pdf' %}" download
-           class="bg-emerald-600 hover:bg-emerald-700 text-white font-semibold px-6 py-3 rounded-full shadow-md transition">
-           Realization Document
-        </a>
-        <a href="{% static 'docs/Birate Kabanza Arthur personal reflection.pdf' %}" download
-           class="bg-cyan-600 hover:bg-cyan-700 text-white font-semibold px-6 py-3 rounded-full shadow-md transition">
-           Personal Reflection
-        </a>
-        <a href="{% static 'docs/Birate kabanza Arthur Technical Reflection .pdf' %}" download
-           class="bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-3 rounded-full shadow-md transition">
-           Technical Reflection
-        </a>
-      </div>
+      <p class="text-lg sm:text-xl text-gray-600">
+        Company: Van Genechten Packaging | Location: Turnhout, Belgium | Duration: February – May
+      </p>
+    </div>
+
+    <!-- Document Buttons -->
+    <div class="flex flex-wrap gap-4 mt-6">
+      <a href="{% static 'docs/projectPlan.pdf' %}" download
+         class="bg-teal-600 hover:bg-teal-700 text-white font-semibold px-6 py-3 rounded-full shadow-md transition">
+         Project Plan
+      </a>
+      <a href="{% static 'docs/Birate_Kabanza_Arthur_realization_document_VGP.pdf' %}" download
+         class="bg-emerald-600 hover:bg-emerald-700 text-white font-semibold px-6 py-3 rounded-full shadow-md transition">
+         Realization Document
+      </a>
+      <a href="{% static 'docs/Birate Kabanza Arthur personal reflection.pdf' %}" download
+         class="bg-cyan-600 hover:bg-cyan-700 text-white font-semibold px-6 py-3 rounded-full shadow-md transition">
+         Personal Reflection
+      </a>
+      <a href="{% static 'docs/Birate kabanza Arthur Technical Reflection .pdf' %}" download
+         class="bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-3 rounded-full shadow-md transition">
+         Technical Reflection
+      </a>
     </div>
 
     <!-- Description -->
-    <div class="space-y-4">
+    <div class="space-y-6">
       <h2 class="text-2xl sm:text-3xl font-bold text-gray-800">Description</h2>
       <p class="text-gray-700 text-base sm:text-lg leading-relaxed">
         The internship focused on ensuring business continuity by monitoring cloud infrastructure and microservices within Van Genechten Packaging’s private cloud environment, based on OpenShift / Open Kubernetes Distribution.
@@ -44,7 +48,7 @@
     </div>
 
     <!-- Tasks -->
-    <div class="space-y-4">
+    <div class="space-y-6">
       <h2 class="text-2xl sm:text-3xl font-bold text-gray-800">Tasks</h2>
       <ul class="list-disc list-inside text-gray-700 text-base sm:text-lg space-y-2">
         <li>Developed and configured Grafana dashboards to monitor VMs, containers, and IoT devices.</li>
@@ -55,7 +59,7 @@
     </div>
 
     <!-- Tools & Technologies -->
-    <div class="space-y-4">
+    <div class="space-y-6">
       <h2 class="text-2xl sm:text-3xl font-bold text-gray-800">Tools & Technologies</h2>
       <ul class="list-disc list-inside text-gray-700 text-base sm:text-lg space-y-2">
         <li>Elasticsearch – log collection and search analytics platform</li>
@@ -67,7 +71,7 @@
     </div>
 
     <!-- Key Contributions -->
-    <div class="space-y-4">
+    <div class="space-y-6">
       <h2 class="text-2xl sm:text-3xl font-bold text-gray-800">Key Contributions</h2>
       <ul class="list-disc list-inside text-gray-700 text-base sm:text-lg space-y-2">
         <li>Designed and implemented detailed Grafana dashboards for cloud and IoT monitoring, enabling stakeholders to track infrastructure health in real-time.</li>
@@ -79,7 +83,7 @@
     </div>
 
     <!-- Achievements -->
-    <div class="space-y-4">
+    <div class="space-y-6">
       <h2 class="text-2xl sm:text-3xl font-bold text-gray-800">Achievements</h2>
       <ul class="list-disc list-inside text-gray-700 text-base sm:text-lg space-y-2">
         <li>Successfully delivered multiple Grafana dashboards covering all critical cloud and IoT metrics for real-time monitoring.</li>
@@ -90,7 +94,7 @@
     </div>
 
     <!-- Personal Reflection -->
-    <div class="space-y-4">
+    <div class="space-y-6">
       <h2 class="text-2xl sm:text-3xl font-bold text-gray-800">Personal Reflection</h2>
       <p class="text-gray-700 text-base sm:text-lg leading-relaxed">
         This internship provided a hands-on introduction to system monitoring, data analysis, and cloud observability. I gained practical experience in building dashboards, processing logs, and interpreting infrastructure metrics using Grafana, Kibana, Elasticsearch, and Logstash.
@@ -102,7 +106,7 @@
         Overall, this internship reinforced my interest in pursuing a career in data engineering and analytics. It allowed me to bridge theoretical knowledge with practical applications, develop analytical thinking, and strengthen my technical skillset for future professional challenges.
       </p>
     </div>
-   arthur
+
   </div>
 </div>
 
