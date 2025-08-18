@@ -1,120 +1,109 @@
-
 {% extends 'main.html' %}
 {% load static %}
 {% block content %}
 
-<div class="w-full pt-36 font-serif bg-gradient-to-br from-blue-50 via-white to-teal-100 animate-fade-in-up">
-  <div class="max-w-6xl mx-auto shadow-2xl rounded-3xl p-12 border border-teal-200 bg-white space-y-16">
+<div class="w-full bg-gradient-to-br from-blue-50 via-white to-teal-100 py-16 px-6 font-serif">
+  <div class="max-w-4xl mx-auto space-y-16 text-center">
 
-    <!-- Title -->
-    <div class="text-center mb-10">
-      <h1 class="text-4xl sm:text-5xl font-extrabold text-teal-700 tracking-tight">Van Genechten Packaging Internship</h1>
-      <p class="text-gray-600 mt-3 text-lg">Private Cloud Monitoring & Data Analytics</p>
-    </div>
-
-    <!-- Document Download Buttons -->
-    <div class="flex flex-wrap justify-center gap-4 mb-12">
-      <a href="{% static 'docs/projectPlan.pdf' %}" download
-         class="flex items-center justify-center gap-2 bg-teal-600 hover:bg-teal-700 text-white font-semibold px-6 py-3 rounded-xl shadow-md transition">
-         📄 <span>Project Plan</span>
-      </a>
-      <a href="{% static 'docs/Birate_Kabanza_Arthur_realization_document_VGP.pdf' %}" download
-         class="flex items-center justify-center gap-2 bg-emerald-600 hover:bg-emerald-700 text-white font-semibold px-6 py-3 rounded-xl shadow-md transition">
-         📄 <span>Realization Document</span>
-      </a>
-      <a href="{% static 'docs/Birate Kabanza Arthur personal reflection.pdf' %}" download
-         class="flex items-center justify-center gap-2 bg-cyan-600 hover:bg-cyan-700 text-white font-semibold px-6 py-3 rounded-xl shadow-md transition">
-         📄 <span>Personal Reflection</span>
-      </a>
-      <a href="{% static 'docs/Birate kabanza Arthur Technical Reflection .pdf' %}" download
-         class="flex items-center justify-center gap-2 bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-3 rounded-xl shadow-md transition">
-         📄 <span>Technical Reflection</span>
-      </a>
+    <!-- Header & Document Buttons -->
+    <div class="space-y-6">
+      <h1 class="text-4xl sm:text-5xl font-extrabold text-teal-700">Van Genechten Packaging Internship</h1>
+      <p class="text-lg sm:text-xl text-gray-600">Private Cloud Monitoring & Data Analytics</p>
+      <div class="flex flex-wrap justify-center gap-4 mt-4">
+        <a href="{% static 'docs/projectPlan.pdf' %}" download
+           class="bg-teal-600 hover:bg-teal-700 text-white font-semibold px-6 py-3 rounded-full shadow-md transition">
+           Project Plan
+        </a>
+        <a href="{% static 'docs/Birate_Kabanza_Arthur_realization_document_VGP.pdf' %}" download
+           class="bg-emerald-600 hover:bg-emerald-700 text-white font-semibold px-6 py-3 rounded-full shadow-md transition">
+           Realization Document
+        </a>
+        <a href="{% static 'docs/Birate Kabanza Arthur personal reflection.pdf' %}" download
+           class="bg-cyan-600 hover:bg-cyan-700 text-white font-semibold px-6 py-3 rounded-full shadow-md transition">
+           Personal Reflection
+        </a>
+        <a href="{% static 'docs/Birate kabanza Arthur Technical Reflection .pdf' %}" download
+           class="bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-3 rounded-full shadow-md transition">
+           Technical Reflection
+        </a>
+      </div>
     </div>
 
     <!-- Description -->
-    <section class="space-y-6 text-center mx-auto max-w-3xl">
+    <div class="space-y-6 text-left">
       <h2 class="text-2xl sm:text-3xl font-bold text-gray-800">Description</h2>
       <p class="text-gray-700 text-base sm:text-lg leading-relaxed">
-        The internship project focused on ensuring business continuity and operational excellence by monitoring the cloud infrastructure and microservices of Van Genechten Packaging’s private cloud environment, based on OpenShift and Open Kubernetes Distribution.
+        The internship focused on ensuring business continuity by monitoring cloud infrastructure and microservices within Van Genechten Packaging’s private cloud environment, based on OpenShift / Open Kubernetes Distribution.
       </p>
       <p class="text-gray-700 text-base sm:text-lg leading-relaxed">
-        Monitoring was implemented across multiple layers, including hardware, network, storage, IoT devices, VMs, containers, and Kubernetes microservices. Elasticsearch served as the primary platform for log aggregation and analysis, while Grafana dashboards enabled real-time visualization of system metrics and anomalies.
+        Monitoring was set up across hardware, network, storage, IoT devices, virtual machines, containerized applications, and Kubernetes microservices. Elasticsearch handled log aggregation and analysis, while Grafana dashboards provided real-time visualization of metrics and anomalies.
       </p>
       <p class="text-gray-700 text-base sm:text-lg leading-relaxed">
-        The project also involved working with data pipelines using Logstash and applying machine learning models to detect unusual log patterns, enhancing predictive insights and anomaly detection for the system.
+        Data pipelines were implemented using Logstash to preprocess, transform, and forward logs. Machine learning techniques were applied for anomaly detection, allowing predictive insights and proactive identification of potential issues.
       </p>
-    </section>
+    </div>
 
     <!-- Tasks -->
-    <section class="space-y-6 text-center mx-auto max-w-3xl">
+    <div class="space-y-6 text-left">
       <h2 class="text-2xl sm:text-3xl font-bold text-gray-800">Tasks</h2>
-      <ul class="list-disc list-inside text-gray-700 space-y-3 text-left">
-        <li>Developed Grafana dashboards to monitor cloud infrastructure layers and IoT devices.</li>
-        <li>Processed logs with Logstash before forwarding to Elasticsearch for efficient storage and analysis.</li>
-        <li>Analyzed Kubernetes metrics including pod CPU/memory usage and node health to identify bottlenecks.</li>
-        <li>Implemented anomaly detection dashboards leveraging Elasticsearch ML to flag unusual logs.</li>
+      <ul class="list-disc list-inside text-gray-700 text-base sm:text-lg space-y-2">
+        <li>Developed and configured Grafana dashboards to monitor VMs, containers, and IoT devices.</li>
+        <li>Processed, filtered, and enriched logs with Logstash before sending to Elasticsearch.</li>
+        <li>Analyzed Kubernetes metrics including pod CPU/memory usage, node health, and container performance.</li>
+        <li>Implemented anomaly detection dashboards leveraging Elasticsearch ML to flag unusual log patterns.</li>
       </ul>
-    </section>
+    </div>
 
     <!-- Tools & Technologies -->
-    <section class="space-y-6 text-center mx-auto max-w-3xl">
+    <div class="space-y-6 text-left">
       <h2 class="text-2xl sm:text-3xl font-bold text-gray-800">Tools & Technologies</h2>
-      <ul class="list-disc list-inside text-gray-700 space-y-3 text-left">
-        <li>Elasticsearch – log collection and analytics platform</li>
-        <li>Kibana – visualizing Elasticsearch data with interactive dashboards</li>
+      <ul class="list-disc list-inside text-gray-700 text-base sm:text-lg space-y-2">
+        <li>Elasticsearch – log collection and search analytics platform</li>
+        <li>Kibana – visualizing Elasticsearch data and creating interactive dashboards</li>
         <li>Grafana – real-time dashboards for infrastructure metrics</li>
-        <li>Logstash – data pipeline for collecting, transforming, and forwarding logs</li>
+        <li>Logstash – data pipeline tool for collecting, transforming, and forwarding logs</li>
         <li>OpenShift / Kubernetes – container orchestration and cloud management</li>
       </ul>
-    </section>
+    </div>
 
     <!-- Key Contributions -->
-    <section class="space-y-6 text-center mx-auto max-w-3xl">
+    <div class="space-y-6 text-left">
       <h2 class="text-2xl sm:text-3xl font-bold text-gray-800">Key Contributions</h2>
-      <ul class="list-disc list-inside text-gray-700 space-y-3 text-left">
-        <li>Designed detailed Grafana dashboards for cloud and IoT monitoring with real-time insights.</li>
-        <li>Built Logstash pipelines to optimize log processing and reduce load on Elasticsearch.</li>
-        <li>Monitored Kubernetes clusters and provided actionable insights to improve resource efficiency.</li>
-        <li>Integrated anomaly detection mechanisms using ML to proactively identify critical issues.</li>
+      <ul class="list-disc list-inside text-gray-700 text-base sm:text-lg space-y-2">
+        <li>Designed Grafana dashboards for cloud and IoT monitoring with real-time insights.</li>
+        <li>Developed Logstash pipelines to optimize log processing and reduce Elasticsearch load.</li>
+        <li>Monitored Kubernetes clusters and provided actionable insights to improve efficiency.</li>
+        <li>Integrated anomaly detection mechanisms using machine learning to identify critical issues.</li>
         <li>Documented monitoring setup and dashboards for knowledge transfer to the operations team.</li>
       </ul>
-    </section>
+    </div>
 
     <!-- Achievements -->
-    <section class="space-y-6 text-center mx-auto max-w-3xl">
+    <div class="space-y-6 text-left">
       <h2 class="text-2xl sm:text-3xl font-bold text-gray-800">Achievements</h2>
-      <ul class="list-disc list-inside text-gray-700 space-y-3 text-left">
-        <li>Delivered multiple Grafana dashboards for real-time monitoring of critical metrics.</li>
-        <li>Optimized data flow with Logstash preprocessing, improving Elasticsearch query performance by 30%.</li>
-        <li>Enhanced visibility of cloud infrastructure health, enabling faster incident resolution.</li>
+      <ul class="list-disc list-inside text-gray-700 text-base sm:text-lg space-y-2">
+        <li>Delivered multiple Grafana dashboards covering critical cloud and IoT metrics.</li>
+        <li>Optimized data flow through Logstash, improving Elasticsearch query performance by 30%.</li>
+        <li>Enhanced infrastructure visibility, enabling faster incident detection and resolution.</li>
         <li>Gained hands-on experience in full-stack cloud monitoring and observability.</li>
       </ul>
-    </section>
+    </div>
 
     <!-- Personal Reflection -->
-    <section class="space-y-6 text-center mx-auto max-w-3xl">
+    <div class="space-y-6 text-left">
       <h2 class="text-2xl sm:text-3xl font-bold text-gray-800">Personal Reflection</h2>
-      <p class="text-gray-700 leading-relaxed">
-        This internship provided hands-on experience in system monitoring, data analysis, and cloud observability. I gained practical skills in building dashboards, processing logs, and interpreting infrastructure metrics.
+      <p class="text-gray-700 text-base sm:text-lg leading-relaxed">
+        This internship provided hands-on experience in system monitoring, data analysis, and cloud observability. I learned to build dashboards, process logs, and interpret infrastructure metrics using Grafana, Kibana, Elasticsearch, and Logstash.
       </p>
-      <p class="text-gray-700 leading-relaxed">
-        Working independently and with the team reinforced proactive problem-solving and structured data analysis. I learned to detect anomalies and translate technical insights into actionable recommendations.
+      <p class="text-gray-700 text-base sm:text-lg leading-relaxed">
+        Working both independently and collaboratively reinforced proactive problem-solving, structured data analysis, and the ability to translate technical insights into actionable recommendations.
       </p>
-      <p class="text-gray-700 leading-relaxed">
-        Overall, the internship strengthened my interest in data engineering and analytics, bridging theoretical knowledge with real-world applications while enhancing my technical and analytical skills.
+      <p class="text-gray-700 text-base sm:text-lg leading-relaxed">
+        Overall, this experience strengthened my interest in pursuing a career in data engineering and analytics, bridging theoretical knowledge with practical applications while enhancing my technical and analytical skills.
       </p>
-    </section>
+    </div>
 
   </div>
 </div>
-
-<style>
-@keyframes fade-in-up {
-  0% { opacity: 0; transform: translateY(40px); }
-  100% { opacity: 1; transform: translateY(0); }
-}
-.animate-fade-in-up { animation: fade-in-up 1s ease-out both; }
-</style>
 
 {% endblock content %}
