@@ -3,16 +3,16 @@
 {% block content %}
 
 <div class="w-full pt-36 font-serif bg-gradient-to-br from-blue-50 via-white to-teal-100 animate-fade-in-up">
-  <div class="max-w-6xl mx-auto shadow-2xl rounded-3xl p-10 border border-teal-200 bg-white">
+  <div class="max-w-6xl mx-auto shadow-2xl rounded-3xl p-10 border border-teal-200 bg-white space-y-12">
 
-    <!-- Title -->
-    <div class="mb-6 text-center">
-      <h1 class="text-4xl font-extrabold text-teal-700 tracking-tight">{{ internship.title }}</h1>
+    <!-- Title & Company -->
+    <div class="text-center space-y-3">
+      <h1 class="text-4xl sm:text-5xl font-extrabold text-teal-700 tracking-tight">{{ internship.title }}</h1>
       <p class="text-gray-600 mt-2 text-lg">{{ internship.company_name }} &bull; {{ internship.period }}</p>
     </div>
 
     <!-- Document Download Buttons -->
-    <div class="flex flex-wrap justify-center gap-4 mb-12">
+    <div class="flex flex-wrap justify-center gap-4">
       <a href="{% static 'docs/projectPlan.pdf' %}" download
          class="flex items-center justify-center gap-2 bg-teal-600 hover:bg-teal-700 text-white font-semibold px-6 py-3 rounded-xl shadow-md transition">
          📄 <span>Project Plan</span>
@@ -30,20 +30,23 @@
          📄 <span>Technical Reflection</span>
       </a>
     </div>
-    
 
     <!-- Description -->
-    <section class="mb-10">
-      <h2 class="text-2xl font-semibold text-gray-800 mb-4">Description</h2>
-      <p class="text-gray-700 leading-relaxed whitespace-pre-line">{{ internship.description|default:"No description provided." }}</p>
+    <section class="space-y-4">
+      <h2 class="text-2xl sm:text-3xl font-semibold text-gray-800">Description</h2>
+      <p class="text-gray-700 text-base sm:text-lg leading-relaxed whitespace-pre-line">
+        {{ internship.description|default:"No description provided." }}
+      </p>
     </section>
 
     <!-- Tasks -->
-    <section class="mb-10">
-      <h2 class="text-2xl font-semibold text-gray-800 mb-4">Tasks</h2>
+    <section class="space-y-4">
+      <h2 class="text-2xl sm:text-3xl font-semibold text-gray-800">Tasks</h2>
       <ul class="grid grid-cols-1 md:grid-cols-2 gap-4 text-gray-700 list-disc list-inside">
         {% for task in internship.get_tasks_list %}
-          <li class="bg-teal-50 px-4 py-2 rounded-xl shadow hover:scale-105 hover:bg-teal-100 transition duration-300">{{ task }}</li>
+          <li class="bg-teal-50 px-4 py-2 rounded-xl shadow hover:scale-105 hover:bg-teal-100 transition duration-300">
+            {{ task }}
+          </li>
         {% empty %}
           <li class="text-gray-500 italic">No tasks provided.</li>
         {% endfor %}
@@ -51,11 +54,13 @@
     </section>
 
     <!-- Tools -->
-    <section class="mb-10">
-      <h2 class="text-2xl font-semibold text-gray-800 mb-4">Tools & Technologies</h2>
+    <section class="space-y-4">
+      <h2 class="text-2xl sm:text-3xl font-semibold text-gray-800">Tools & Technologies</h2>
       <ul class="grid grid-cols-1 md:grid-cols-2 gap-4 text-gray-700 list-disc list-inside">
         {% for tool in internship.get_tools_list %}
-          <li class="bg-teal-50 px-4 py-2 rounded-xl shadow hover:scale-105 hover:bg-teal-100 transition duration-300">{{ tool }}</li>
+          <li class="bg-teal-50 px-4 py-2 rounded-xl shadow hover:scale-105 hover:bg-teal-100 transition duration-300">
+            {{ tool }}
+          </li>
         {% empty %}
           <li class="text-gray-500 italic">No tools listed.</li>
         {% endfor %}
@@ -63,11 +68,13 @@
     </section>
 
     <!-- Contributions -->
-    <section class="mb-10">
-      <h2 class="text-2xl font-semibold text-gray-800 mb-4">Key Contributions</h2>
+    <section class="space-y-4">
+      <h2 class="text-2xl sm:text-3xl font-semibold text-gray-800">Key Contributions</h2>
       <ul class="grid grid-cols-1 md:grid-cols-2 gap-4 text-gray-700 list-disc list-inside">
         {% for contribution in internship.get_contributions_list %}
-          <li class="bg-teal-50 px-4 py-2 rounded-xl shadow hover:scale-105 hover:bg-teal-100 transition duration-300">{{ contribution }}</li>
+          <li class="bg-teal-50 px-4 py-2 rounded-xl shadow hover:scale-105 hover:bg-teal-100 transition duration-300">
+            {{ contribution }}
+          </li>
         {% empty %}
           <li class="text-gray-500 italic">No contributions recorded.</li>
         {% endfor %}
@@ -75,11 +82,13 @@
     </section>
 
     <!-- Achievements -->
-    <section class="mb-10">
-      <h2 class="text-2xl font-semibold text-gray-800 mb-4">Achievements</h2>
+    <section class="space-y-4">
+      <h2 class="text-2xl sm:text-3xl font-semibold text-gray-800">Achievements</h2>
       <ul class="grid grid-cols-1 md:grid-cols-2 gap-4 text-gray-700 list-disc list-inside">
         {% for achievement in internship.get_achievements_list %}
-          <li class="bg-teal-50 px-4 py-2 rounded-xl shadow hover:scale-105 hover:bg-teal-100 transition duration-300">{{ achievement }}</li>
+          <li class="bg-teal-50 px-4 py-2 rounded-xl shadow hover:scale-105 hover:bg-teal-100 transition duration-300">
+            {{ achievement }}
+          </li>
         {% empty %}
           <li class="text-gray-500 italic">No achievements listed.</li>
         {% endfor %}
@@ -87,16 +96,33 @@
     </section>
 
     <!-- Technical Reflection -->
-    <section class="mb-10">
-      <h2 class="text-2xl font-semibold text-gray-800 mb-4">Technical Reflection</h2>
+    <section class="space-y-6">
+      <h2 class="text-2xl sm:text-3xl font-semibold text-gray-800">Technical Reflection</h2>
       <div class="bg-gray-50 p-6 rounded-xl text-gray-700 shadow-inner whitespace-pre-line">
-        {{ internship.technical_reflection }}
+
+        <!-- Technical Skills Gained -->
+        <p class="text-lg font-bold text-teal-700 mt-4 mb-2">Technical Skills Gained</p>
+        <p class="mb-4 leading-relaxed">
+          {{ internship.technical_skills_gained|default:"No technical skills listed." }}
+        </p>
+
+        <!-- Soft Skills Gained -->
+        <p class="text-lg font-bold text-teal-700 mt-4 mb-2">Soft Skills Gained</p>
+        <p class="mb-4 leading-relaxed">
+          {{ internship.soft_skills_gained|default:"No soft skills listed." }}
+        </p>
+
+        <!-- Additional Technical Reflection Text -->
+        <p class="mt-4 leading-relaxed">
+          {{ internship.technical_reflection }}
+        </p>
+
       </div>
     </section>
 
     <!-- Personal Reflection -->
-    <section class="mb-10">
-      <h2 class="text-2xl font-semibold text-gray-800 mb-4">Personal Reflection</h2>
+    <section class="space-y-4">
+      <h2 class="text-2xl sm:text-3xl font-semibold text-gray-800">Personal Reflection</h2>
       <div class="bg-gray-50 p-6 rounded-xl text-gray-700 shadow-inner whitespace-pre-line">
         {{ internship.personal_reflection }}
       </div>
