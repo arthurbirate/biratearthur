@@ -1,21 +1,15 @@
-{% extends 'main.html' %}
-{% load static %}
-{% block content %}
-
 <div class="w-full bg-gradient-to-br from-blue-50 via-white to-emerald-100 py-24 px-6 font-serif">
-  <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 items-start lg:items-center">
+  <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
 
-    <!-- Image Section -->
-  <!-- Image Section -->
-  <div class="col-span-12 lg:col-span-5 flex justify-center lg:justify-end">
-    <div class="flex-none w-[100px] h-[140px] overflow-hidden border-4 border-white rounded-xl shadow-lg">
-      <img src="{% static 'profile/profileArthur.webp' %}" 
-          alt="Profile Picture"
-          class="w-full h-full object-cover rounded-xl transition-transform duration-500 hover:scale-105"
-          loading="lazy">
+    <!-- Image Section (Left on desktop) -->
+    <div class="col-span-12 lg:col-span-5 flex justify-center lg:justify-start">
+      <div class="flex-none w-[100px] h-[140px] overflow-hidden border-4 border-white rounded-xl shadow-lg">
+        <img src="{% static 'profile/profileArthur.webp' %}" 
+             alt="Profile Picture"
+             class="w-full h-full object-cover rounded-xl transition-transform duration-500 hover:scale-105"
+             loading="lazy">
+      </div>
     </div>
-  </div>
-
 
     <!-- Content Section -->
     <div class="col-span-12 lg:col-span-7 flex flex-col justify-center">
@@ -23,17 +17,19 @@
       <p class="text-xl text-gray-600 mb-8">{{ about.title }}</p>
 
       <div class="space-y-8">
-
+        <!-- Biography -->
         <div>
           <h2 class="text-2xl font-bold text-gray-800 mb-2">Biography</h2>
           <p class="text-gray-700 leading-relaxed whitespace-pre-line">{{ about.biography }}</p>
         </div>
 
+        <!-- Passions -->
         <div>
           <h2 class="text-2xl font-bold text-gray-800 mb-2">Passions</h2>
           <p class="text-gray-700 leading-relaxed whitespace-pre-line">{{ about.passions }}</p>
         </div>
 
+        <!-- Academic Background -->
         <div>
           <h2 class="text-2xl font-bold text-gray-800 mb-2">Academic Background</h2>
           <ul class="list-disc list-inside text-gray-700">
@@ -46,12 +42,14 @@
           </ul>
         </div>
 
+        <!-- Languages -->
         <div>
           <h2 class="text-2xl font-bold text-gray-800 mb-2">Languages</h2>
           <p class="text-gray-700">Native: {{ about.native_language }}</p>
           <p class="text-gray-700">Fluent: {{ about.fluent_languages }}</p>
         </div>
 
+        <!-- Key Strengths -->
         <div>
           <h2 class="text-2xl font-bold text-gray-800 mb-4">Key Strengths</h2>
           <div class="flex flex-wrap gap-3">
@@ -63,6 +61,7 @@
           </div>
         </div>
 
+        <!-- Download CV -->
         <div class="mt-10">
           <a href="{% static 'docs/Birate_Arthur_CV.pdf' %}" target="_blank" download 
              class="inline-block bg-teal-600 hover:bg-teal-700 text-white font-semibold px-8 py-3 rounded-full shadow-lg transition">
@@ -75,5 +74,3 @@
 
   </div>
 </div>
-
-{% endblock content %}
