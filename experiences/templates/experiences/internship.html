@@ -1,3 +1,4 @@
+
 {% extends 'main.html' %}
 {% load static %}
 {% block content %}
@@ -32,76 +33,76 @@
     </div>
 
     <!-- Description -->
-    <section class="space-y-6">
+    <section class="space-y-6 text-center mx-auto max-w-3xl">
       <h2 class="text-2xl sm:text-3xl font-bold text-gray-800">Description</h2>
       <p class="text-gray-700 text-base sm:text-lg leading-relaxed">
-        The internship project focused on ensuring business continuity and operational excellence by monitoring the cloud infrastructure and microservices of Van Genechten Packaging’s private cloud environment, which is based on OpenShift and Open Kubernetes Distribution. The initiative aimed to provide detailed insights into system performance and reliability while improving the company’s overall observability.
+        The internship project focused on ensuring business continuity and operational excellence by monitoring the cloud infrastructure and microservices of Van Genechten Packaging’s private cloud environment, based on OpenShift and Open Kubernetes Distribution.
       </p>
       <p class="text-gray-700 text-base sm:text-lg leading-relaxed">
-        Monitoring was implemented across multiple layers, including hardware, network, storage, IoT devices, virtual machines (hypervisors), containerized applications, and the microservices running on Kubernetes. Elasticsearch served as the primary platform for log aggregation and analysis, while Grafana dashboards enabled real-time visualization of system metrics, anomalies, and alerts. This comprehensive approach ensured that potential issues could be detected and resolved proactively.
+        Monitoring was implemented across multiple layers, including hardware, network, storage, IoT devices, VMs, containers, and Kubernetes microservices. Elasticsearch served as the primary platform for log aggregation and analysis, while Grafana dashboards enabled real-time visualization of system metrics and anomalies.
       </p>
       <p class="text-gray-700 text-base sm:text-lg leading-relaxed">
-        The project also involved working with data pipelines using Logstash to preprocess, transform, and forward logs to Elasticsearch. In parallel, machine learning models were applied to detect unusual log patterns, enabling predictive insights and anomaly detection, which contributed significantly to the reliability of the system.
+        The project also involved working with data pipelines using Logstash and applying machine learning models to detect unusual log patterns, enhancing predictive insights and anomaly detection for the system.
       </p>
     </section>
 
     <!-- Tasks -->
-    <section class="space-y-6">
+    <section class="space-y-6 text-center mx-auto max-w-3xl">
       <h2 class="text-2xl sm:text-3xl font-bold text-gray-800">Tasks</h2>
-      <ul class="list-disc list-inside text-gray-700 space-y-3">
-        <li>Developed and configured Grafana dashboards to monitor different layers of the cloud infrastructure, including VMs, containers, and IoT devices, ensuring a comprehensive system overview.</li>
-        <li>Processed, filtered, and enriched logs using Logstash before forwarding them to Elasticsearch, improving data quality and reducing storage overhead.</li>
-        <li>Analyzed Kubernetes metrics, including pod CPU and memory usage, node health, and container performance, to proactively identify resource bottlenecks.</li>
-        <li>Implemented anomaly detection dashboards leveraging Elasticsearch machine learning features to flag unusual log patterns and alert the team to potential issues.</li>
+      <ul class="list-disc list-inside text-gray-700 space-y-3 text-left">
+        <li>Developed Grafana dashboards to monitor cloud infrastructure layers and IoT devices.</li>
+        <li>Processed logs with Logstash before forwarding to Elasticsearch for efficient storage and analysis.</li>
+        <li>Analyzed Kubernetes metrics including pod CPU/memory usage and node health to identify bottlenecks.</li>
+        <li>Implemented anomaly detection dashboards leveraging Elasticsearch ML to flag unusual logs.</li>
       </ul>
     </section>
 
     <!-- Tools & Technologies -->
-    <section class="space-y-6">
+    <section class="space-y-6 text-center mx-auto max-w-3xl">
       <h2 class="text-2xl sm:text-3xl font-bold text-gray-800">Tools & Technologies</h2>
-      <ul class="list-disc list-inside text-gray-700 space-y-3">
-        <li>Elasticsearch – log collection and search analytics platform</li>
-        <li>Kibana – visualizing Elasticsearch data and creating interactive dashboards</li>
-        <li>Grafana – real-time dashboards for monitoring infrastructure metrics</li>
-        <li>Logstash – data pipeline tool for collecting, transforming, and forwarding logs</li>
+      <ul class="list-disc list-inside text-gray-700 space-y-3 text-left">
+        <li>Elasticsearch – log collection and analytics platform</li>
+        <li>Kibana – visualizing Elasticsearch data with interactive dashboards</li>
+        <li>Grafana – real-time dashboards for infrastructure metrics</li>
+        <li>Logstash – data pipeline for collecting, transforming, and forwarding logs</li>
         <li>OpenShift / Kubernetes – container orchestration and cloud management</li>
       </ul>
     </section>
 
     <!-- Key Contributions -->
-    <section class="space-y-6">
+    <section class="space-y-6 text-center mx-auto max-w-3xl">
       <h2 class="text-2xl sm:text-3xl font-bold text-gray-800">Key Contributions</h2>
-      <ul class="list-disc list-inside text-gray-700 space-y-3">
-        <li>Designed and implemented detailed Grafana dashboards for cloud and IoT monitoring, enabling stakeholders to track infrastructure health in real-time.</li>
-        <li>Developed Logstash pipelines for log processing, which reduced the load on Elasticsearch and accelerated query performance.</li>
-        <li>Monitored Kubernetes clusters, analyzed node and pod metrics, and provided actionable recommendations to improve resource efficiency.</li>
-        <li>Integrated anomaly detection mechanisms using machine learning to proactively identify critical issues before they impacted production systems.</li>
-        <li>Documented monitoring setup and dashboards to facilitate knowledge transfer to the operations team.</li>
+      <ul class="list-disc list-inside text-gray-700 space-y-3 text-left">
+        <li>Designed detailed Grafana dashboards for cloud and IoT monitoring with real-time insights.</li>
+        <li>Built Logstash pipelines to optimize log processing and reduce load on Elasticsearch.</li>
+        <li>Monitored Kubernetes clusters and provided actionable insights to improve resource efficiency.</li>
+        <li>Integrated anomaly detection mechanisms using ML to proactively identify critical issues.</li>
+        <li>Documented monitoring setup and dashboards for knowledge transfer to the operations team.</li>
       </ul>
     </section>
 
     <!-- Achievements -->
-    <section class="space-y-6">
+    <section class="space-y-6 text-center mx-auto max-w-3xl">
       <h2 class="text-2xl sm:text-3xl font-bold text-gray-800">Achievements</h2>
-      <ul class="list-disc list-inside text-gray-700 space-y-3">
-        <li>Successfully delivered multiple Grafana dashboards covering all critical cloud and IoT metrics for real-time monitoring.</li>
-        <li>Optimized data flow through Logstash preprocessing, reducing Elasticsearch query times by more than 30%.</li>
-        <li>Enhanced visibility of cloud infrastructure health, contributing to faster incident detection and resolution.</li>
-        <li>Gained practical expertise in full-stack cloud monitoring and observability within a private enterprise environment.</li>
+      <ul class="list-disc list-inside text-gray-700 space-y-3 text-left">
+        <li>Delivered multiple Grafana dashboards for real-time monitoring of critical metrics.</li>
+        <li>Optimized data flow with Logstash preprocessing, improving Elasticsearch query performance by 30%.</li>
+        <li>Enhanced visibility of cloud infrastructure health, enabling faster incident resolution.</li>
+        <li>Gained hands-on experience in full-stack cloud monitoring and observability.</li>
       </ul>
     </section>
 
     <!-- Personal Reflection -->
-    <section class="space-y-6">
+    <section class="space-y-6 text-center mx-auto max-w-3xl">
       <h2 class="text-2xl sm:text-3xl font-bold text-gray-800">Personal Reflection</h2>
-      <p class="text-gray-700 leading-relaxed whitespace-pre-line">
-        This internship provided a hands-on introduction to system monitoring, data analysis, and cloud observability. I gained practical experience in building dashboards, processing logs, and interpreting infrastructure metrics using Grafana, Kibana, Elasticsearch, and Logstash.
+      <p class="text-gray-700 leading-relaxed">
+        This internship provided hands-on experience in system monitoring, data analysis, and cloud observability. I gained practical skills in building dashboards, processing logs, and interpreting infrastructure metrics.
       </p>
-      <p class="text-gray-700 leading-relaxed whitespace-pre-line">
-        Working independently and collaborating with the team taught me the importance of proactive problem-solving and structured data analysis. I learned to identify key performance indicators, detect anomalies, and translate technical insights into actionable recommendations.
+      <p class="text-gray-700 leading-relaxed">
+        Working independently and with the team reinforced proactive problem-solving and structured data analysis. I learned to detect anomalies and translate technical insights into actionable recommendations.
       </p>
-      <p class="text-gray-700 leading-relaxed whitespace-pre-line">
-        Overall, this internship reinforced my interest in pursuing a career in data engineering and analytics. It allowed me to bridge theoretical knowledge with practical applications, develop analytical thinking, and strengthen my technical skillset for future professional challenges.
+      <p class="text-gray-700 leading-relaxed">
+        Overall, the internship strengthened my interest in data engineering and analytics, bridging theoretical knowledge with real-world applications while enhancing my technical and analytical skills.
       </p>
     </section>
 
