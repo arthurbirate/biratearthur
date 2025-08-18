@@ -5,14 +5,14 @@
 <div class="w-full pt-36 font-serif bg-gradient-to-br from-blue-50 via-white to-teal-100 animate-fade-in-up">
   <div class="max-w-6xl mx-auto shadow-2xl rounded-3xl p-10 border border-teal-200 bg-white space-y-12">
 
-    <!-- Title & Company -->
-    <div class="text-center space-y-3">
-      <h1 class="text-4xl sm:text-5xl font-extrabold text-teal-700 tracking-tight">{{ internship.title }}</h1>
-      <p class="text-gray-600 mt-2 text-lg">{{ internship.company_name }} &bull; {{ internship.period }}</p>
+    <!-- Title -->
+    <div class="text-center mb-8">
+      <h1 class="text-4xl font-extrabold text-teal-700 tracking-tight">Van Genechten Packaging Internship</h1>
+      <p class="text-gray-600 mt-2 text-lg">Private Cloud Monitoring & Data Analytics</p>
     </div>
 
-    <!-- Document Download Buttons -->
-    <div class="flex flex-wrap justify-center gap-4">
+    <!-- Document Download Buttons (dynamic) -->
+    <div class="flex flex-wrap justify-center gap-4 mb-12">
       <a href="{% static 'docs/projectPlan.pdf' %}" download
          class="flex items-center justify-center gap-2 bg-teal-600 hover:bg-teal-700 text-white font-semibold px-6 py-3 rounded-xl shadow-md transition">
          📄 <span>Project Plan</span>
@@ -25,7 +25,7 @@
          class="flex items-center justify-center gap-2 bg-cyan-600 hover:bg-cyan-700 text-white font-semibold px-6 py-3 rounded-xl shadow-md transition">
          📄 <span>Personal Reflection</span>
       </a>
-      <a href="{% static 'docs/BIrate kabanza Arthur Technical Reflection .pdf' %}" download
+      <a href="{% static 'docs/Birate kabanza Arthur Technical Reflection .pdf' %}" download
          class="flex items-center justify-center gap-2 bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-3 rounded-xl shadow-md transition">
          📄 <span>Technical Reflection</span>
       </a>
@@ -33,99 +33,86 @@
 
     <!-- Description -->
     <section class="space-y-4">
-      <h2 class="text-2xl sm:text-3xl font-semibold text-gray-800">Description</h2>
-      <p class="text-gray-700 text-base sm:text-lg leading-relaxed whitespace-pre-line">
-        {{ internship.description|default:"No description provided." }}
+      <h2 class="text-2xl font-semibold text-gray-800">Description</h2>
+      <p class="text-gray-700 leading-relaxed whitespace-pre-line">
+        The internship project focused on ensuring business continuity through the monitoring of cloud infrastructure and microservices within a private cloud environment based on OpenShift / Open Kubernetes Distribution.
+
+        The project involved setting up continuous monitoring across various layers of the cloud architecture, including hardware, network, storage, IoT, hypervisors (VMs), containers, and applications. Elasticsearch was used for data collection and reporting, with Grafana utilized for creating interactive dashboards.
+
+        In addition, IoT and application data monitoring were implemented to uncover valuable insights and trends. Machine learning techniques were employed to detect anomalies in logs, improving the identification of potential issues within the infrastructure.
+
+        The project also included working with data pipelines using Logstash, gaining practical experience in data analytics. Skills were developed in data visualization, dashboard design, and the use of machine learning for log anomaly detection.
       </p>
     </section>
 
     <!-- Tasks -->
     <section class="space-y-4">
-      <h2 class="text-2xl sm:text-3xl font-semibold text-gray-800">Tasks</h2>
-      <ul class="grid grid-cols-1 md:grid-cols-2 gap-4 text-gray-700 list-disc list-inside">
-        {% for task in internship.get_tasks_list %}
-          <li class="bg-teal-50 px-4 py-2 rounded-xl shadow hover:scale-105 hover:bg-teal-100 transition duration-300">
-            {{ task }}
-          </li>
-        {% empty %}
-          <li class="text-gray-500 italic">No tasks provided.</li>
-        {% endfor %}
+      <h2 class="text-2xl font-semibold text-gray-800">Tasks</h2>
+      <ul class="list-disc list-inside text-gray-700 space-y-2">
+        <li>Created dashboards in Grafana to monitor different parts of the cloud and IoT system.</li>
+        <li>Used Logstash to process and send logs to Elasticsearch.</li>
+        <li>Analyzed data from Kubernetes to check pod performance (CPU - memory).</li>
+        <li>Set up a dashboard for detecting unusual log patterns (anomaly detection).</li>
       </ul>
     </section>
 
-    <!-- Tools -->
+    <!-- Tools & Technologies -->
     <section class="space-y-4">
-      <h2 class="text-2xl sm:text-3xl font-semibold text-gray-800">Tools & Technologies</h2>
-      <ul class="grid grid-cols-1 md:grid-cols-2 gap-4 text-gray-700 list-disc list-inside">
-        {% for tool in internship.get_tools_list %}
-          <li class="bg-teal-50 px-4 py-2 rounded-xl shadow hover:scale-105 hover:bg-teal-100 transition duration-300">
-            {{ tool }}
-          </li>
-        {% empty %}
-          <li class="text-gray-500 italic">No tools listed.</li>
-        {% endfor %}
+      <h2 class="text-2xl font-semibold text-gray-800">Tools & Technologies</h2>
+      <ul class="list-disc list-inside text-gray-700 space-y-2">
+        <li>Elasticsearch</li>
+        <li>Kibana</li>
+        <li>Grafana</li>
+        <li>Logstash</li>
       </ul>
     </section>
 
-    <!-- Contributions -->
+    <!-- Key Contributions -->
     <section class="space-y-4">
-      <h2 class="text-2xl sm:text-3xl font-semibold text-gray-800">Key Contributions</h2>
-      <ul class="grid grid-cols-1 md:grid-cols-2 gap-4 text-gray-700 list-disc list-inside">
-        {% for contribution in internship.get_contributions_list %}
-          <li class="bg-teal-50 px-4 py-2 rounded-xl shadow hover:scale-105 hover:bg-teal-100 transition duration-300">
-            {{ contribution }}
-          </li>
-        {% empty %}
-          <li class="text-gray-500 italic">No contributions recorded.</li>
-        {% endfor %}
+      <h2 class="text-2xl font-semibold text-gray-800">Key Contributions</h2>
+      <ul class="list-disc list-inside text-gray-700 space-y-2">
+        <li>Designed and implemented dashboards in Grafana for monitoring cloud infrastructure and IoT metrics.</li>
+        <li>Used Logstash to parse and forward logs into Elasticsearch for visualization.</li>
+        <li>Monitored Kubernetes environments including pod CPU - memory usage and node-level metrics.</li>
+        <li>Created dashboards to track Red Hat license consumption and subscription status.</li>
+        <li>Set up anomaly detection for logs using machine learning features in Elasticsearch.</li>
       </ul>
     </section>
 
     <!-- Achievements -->
     <section class="space-y-4">
-      <h2 class="text-2xl sm:text-3xl font-semibold text-gray-800">Achievements</h2>
-      <ul class="grid grid-cols-1 md:grid-cols-2 gap-4 text-gray-700 list-disc list-inside">
-        {% for achievement in internship.get_achievements_list %}
-          <li class="bg-teal-50 px-4 py-2 rounded-xl shadow hover:scale-105 hover:bg-teal-100 transition duration-300">
-            {{ achievement }}
-          </li>
-        {% empty %}
-          <li class="text-gray-500 italic">No achievements listed.</li>
-        {% endfor %}
+      <h2 class="text-2xl font-semibold text-gray-800">Achievements</h2>
+      <ul class="list-disc list-inside text-gray-700 space-y-2">
+        <li>Created multiple Grafana dashboards to monitor system metrics and performance.</li>
+        <li>Enhanced dashboard loading efficiency by configuring Logstash pipelines to preprocess and filter data, reducing the load on Elasticsearch and accelerating query response times.</li>
       </ul>
     </section>
 
     <!-- Technical Reflection -->
     <section class="space-y-6">
-      <h2 class="text-2xl sm:text-3xl font-semibold text-gray-800">Technical Reflection</h2>
-      <div class="bg-gray-50 p-6 rounded-xl text-gray-700 shadow-inner whitespace-pre-line">
+      <h2 class="text-2xl font-semibold text-gray-800">Technical Reflection</h2>
 
-        <!-- Technical Skills Gained -->
-        <p class="text-lg font-bold text-teal-700 mt-4 mb-2">Technical Skills Gained</p>
-        <p class="mb-4 leading-relaxed">
-          {{ internship.technical_skills_gained|default:"No technical skills listed." }}
-        </p>
+      <h3 class="text-xl font-bold text-gray-700">Technical Skills Gained</h3>
+      <p class="text-gray-700 leading-relaxed">
+        Throughout the internship, I developed a deeper understanding of data visualization, monitoring, and system observability. My proficiency in working with tools like Grafana, Kibana, Elasticsearch, and Logstash significantly improved, allowing me to interpret and structure technical data more effectively.
+      </p>
 
-        <!-- Soft Skills Gained -->
-        <p class="text-lg font-bold text-teal-700 mt-4 mb-2">Soft Skills Gained</p>
-        <p class="mb-4 leading-relaxed">
-          {{ internship.soft_skills_gained|default:"No soft skills listed." }}
-        </p>
-
-        <!-- Additional Technical Reflection Text -->
-        <p class="mt-4 leading-relaxed">
-          {{ internship.technical_reflection }}
-        </p>
-
-      </div>
+      <h3 class="text-xl font-bold text-gray-700 mt-4">Soft Skills Gained</h3>
+      <p class="text-gray-700 leading-relaxed">
+        During the internship, I strengthened my problem-solving skills by consistently analyzing issues and applying structured solutions. This helped me approach technical challenges with a more efficient mindset even when working independently.
+      </p>
     </section>
 
     <!-- Personal Reflection -->
     <section class="space-y-4">
-      <h2 class="text-2xl sm:text-3xl font-semibold text-gray-800">Personal Reflection</h2>
-      <div class="bg-gray-50 p-6 rounded-xl text-gray-700 shadow-inner whitespace-pre-line">
-        {{ internship.personal_reflection }}
-      </div>
+      <h2 class="text-2xl font-semibold text-gray-800">Personal Reflection</h2>
+      <p class="text-gray-700 leading-relaxed whitespace-pre-line">
+        This internship gave me a practical introduction to system monitoring and data analysis, allowing me to apply theoretical knowledge in a real-world environment. I worked independently with tools like Grafana and Elasticsearch, which helped me develop a better understanding of cloud infrastructure and data visualization.
+
+        While I made progress and gained new skills, I also realized that I still have a lot to learn and improve — especially in handling complex monitoring environments and drawing actionable insights more efficiently. This experience has motivated me to continue learning and developing both my technical and analytical abilities.
+
+        Overall, the internship was a valuable step in my professional growth and confirmed my interest in pursuing a career in data engineering and analysis.
+      </p>
     </section>
 
   </div>
@@ -133,18 +120,10 @@
 
 <style>
 @keyframes fade-in-up {
-  0% {
-    opacity: 0;
-    transform: translateY(40px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  0% { opacity: 0; transform: translateY(40px); }
+  100% { opacity: 1; transform: translateY(0); }
 }
-.animate-fade-in-up {
-  animation: fade-in-up 1s ease-out both;
-}
+.animate-fade-in-up { animation: fade-in-up 1s ease-out both; }
 </style>
 
 {% endblock content %}
