@@ -35,9 +35,19 @@
   <div class="mb-12">
     <h2 class="text-2xl font-semibold text-emerald-700 mb-4">Objective</h2>
     <p class="text-gray-700 leading-relaxed">
-      The goal of this project was to solve the famous puzzle of finding “Waldo” in large and crowded images.  
-      Waldo is usually very small and hidden among hundreds of distracting characters. Using state-of-the-art object detection models, I developed a computer vision system capable of accurately locating Waldo in challenging images.
-    </p>
+        The objective of this project was to design and implement an artificial intelligence system that can automatically detect and locate <strong>Waldo</strong> in highly complex, cluttered images from the popular “Where’s Waldo?” puzzle books. Unlike traditional classification tasks, this problem involves object detection in a visually challenging setting:
+      </p>
+      
+      <ul class="text-gray-700 leading-relaxed list-disc pl-6">
+        <li><strong>High visual clutter:</strong> Each image contains hundreds of characters, objects, and patterns, many of which resemble Waldo’s iconic red-and-white outfit.</li>
+        <li><strong>Small target size:</strong> Waldo is typically a very small figure compared to the overall image, making detection more difficult.</li>
+        <li><strong>Distractors:</strong> The presence of lookalike characters and distracting backgrounds increases the challenge for both humans and machine learning models.</li>
+      </ul>
+      
+      <p class="text-gray-700 leading-relaxed">
+        The project’s goal was to overcome these difficulties by applying <strong>YOLOv5</strong> and <strong>YOLOv8</strong>, two advanced deep learning models specialized in real-time object detection. The models were trained on a custom dataset of labeled Waldo images to teach the system to distinguish Waldo from other characters and accurately predict his position within new, unseen puzzle images.
+      </p>
+      
   </div>
 
   <!-- Dataset -->
