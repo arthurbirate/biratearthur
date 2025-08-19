@@ -5,28 +5,68 @@
 <div class="w-full pt-20 font-serif bg-gradient-to-br from-blue-50 via-white to-emerald-100">
   <div class="max-w-5xl mx-auto px-6 py-10">
 
-    <h1 class="text-5xl font-extrabold text-center text-emerald-800 mb-16 tracking-tight">Projects & Achievements</h1>
+    <h1 class="text-5xl font-extrabold text-center text-emerald-800 mb-16 tracking-tight">
+      Projects & Achievements
+    </h1>
 
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-      {% for project in projects %}
-      <div class="bg-white rounded-xl shadow-md p-6 transition-all duration-300 hover:shadow-lg">
-        
-        <!-- Project Title -->
-        <h2 class="text-lg font-semibold text-emerald-700 mb-3">
-          {{ project.title }}
-        </h2>
 
- 
-        <!-- Details Button -->
-        <a href="{% url 'project_detail' project.pk %}" 
+      <!-- Project 1 -->
+      <div class="bg-white rounded-xl shadow-md p-6 transition-all duration-300 hover:shadow-lg">
+        <h2 class="text-lg font-semibold text-emerald-700 mb-3">
+          Object Detection with YOLOv5 & YOLOv8: Where’s Waldo? (Artificial Intelligence)
+        </h2>
+        <a href="{% url 'project1_detail' %}" 
            class="inline-block bg-emerald-600 text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-emerald-700 transition">
           Explore Project →
         </a>
-
       </div>
-      {% endfor %}
-    </div>
 
+      <!-- Project 2 -->
+      <div class="bg-white rounded-xl shadow-md p-6 transition-all duration-300 hover:shadow-lg">
+        <h2 class="text-lg font-semibold text-emerald-700 mb-3">
+          HR Analytics Dashboard (Microsoft Power BI)
+        </h2>
+        <a href="{% url 'project2_detail' %}" 
+           class="inline-block bg-emerald-600 text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-emerald-700 transition">
+          Explore Project →
+        </a>
+      </div>
+
+      <!-- Project 3 -->
+      <div class="bg-white rounded-xl shadow-md p-6 transition-all duration-300 hover:shadow-lg">
+        <h2 class="text-lg font-semibold text-emerald-700 mb-3">
+          VisiAge – Fall & Cough Detection System for Elderly People (Project 4.0, AI)
+        </h2>
+        <a href="{% url 'project3_detail' %}" 
+           class="inline-block bg-emerald-600 text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-emerald-700 transition">
+          Explore Project →
+        </a>
+      </div>
+
+      <!-- Project 4 -->
+      <div class="bg-white rounded-xl shadow-md p-6 transition-all duration-300 hover:shadow-lg">
+        <h2 class="text-lg font-semibold text-emerald-700 mb-3">
+          Olympics Dashboard (Qlik Sense, Business Intelligence)
+        </h2>
+        <a href="{% url 'project4_detail' %}" 
+           class="inline-block bg-emerald-600 text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-emerald-700 transition">
+          Explore Project →
+        </a>
+      </div>
+
+      <!-- Project 5 -->
+      <div class="bg-white rounded-xl shadow-md p-6 transition-all duration-300 hover:shadow-lg">
+        <h2 class="text-lg font-semibold text-emerald-700 mb-3">
+          Superstore Sales & Shipping Analytics (Microsoft Power BI)
+        </h2>
+        <a href="{% url 'project5_detail' %}" 
+           class="inline-block bg-emerald-600 text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-emerald-700 transition">
+          Explore Project →
+        </a>
+      </div>
+
+    </div>
   </div>
 </div>
 
