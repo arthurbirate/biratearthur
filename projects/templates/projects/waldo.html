@@ -5,24 +5,24 @@
 <div class="max-w-5xl mx-auto px-6 py-20 font-serif bg-gradient-to-br from-white via-blue-50 to-emerald-50 rounded-xl shadow-md mt-12">
 
   <!-- Title -->
-  <h1 class="text-4xl font-bold text-emerald-800 mb-6 text-center">
+  <h1 class="text-4xl font-bold text-emerald-800 mb-10 text-center">
     Object Detection with YOLOv5 & YOLOv8: Where’s Waldo? (Artificial Intelligence Project)
   </h1>
 
-  <!-- Links as Buttons -->
-  <div class="flex justify-center gap-4 mb-10">
+  <!-- Links -->
+  <div class="flex justify-center gap-4 mb-12">
     <a href="https://your-project-link.com" target="_blank" 
        class="bg-emerald-600 hover:bg-emerald-700 text-white font-semibold px-6 py-2 rounded-lg shadow transition">
-       🔗 View Project
+       View Project
     </a>
     <a href="https://github.com/your-github-repo" target="_blank" 
        class="bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-2 rounded-lg shadow transition">
-       💻 GitHub Repo
+       GitHub Repo
     </a>
   </div>
 
   <!-- Images -->
-  <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-16">
     {% if image1 %}
     <img src="{{ image1.url }}" alt="YOLO Waldo Project Screenshot 1" class="rounded-lg shadow">
     {% endif %}
@@ -31,53 +31,75 @@
     {% endif %}
   </div>
 
-  <!-- Content -->
-  <div class="space-y-6 text-gray-700 leading-relaxed">
-    <p>
-      <strong>Objective:</strong>  
-      The goal of this project was to solve the famous puzzle of finding “Waldo” in large and crowded images. Waldo is usually very small and hidden among hundreds of distracting characters. Using state-of-the-art object detection models, I developed a computer vision system capable of accurately locating Waldo in challenging images.
+  <!-- Objective -->
+  <div class="mb-12">
+    <h2 class="text-2xl font-semibold text-emerald-700 mb-4">Objective</h2>
+    <p class="text-gray-700 leading-relaxed">
+      The goal of this project was to solve the famous puzzle of finding “Waldo” in large and crowded images.  
+      Waldo is usually very small and hidden among hundreds of distracting characters. Using state-of-the-art object detection models, I developed a computer vision system capable of accurately locating Waldo in challenging images.
     </p>
+  </div>
 
-    <p>
-      <strong>Dataset:</strong>  
-      I collected 200+ high-resolution images from <em>Where’s Waldo</em> books and online sources. Each image was manually annotated using <em>Roboflow</em>, drawing bounding boxes around Waldo. The dataset was divided into training, validation, and testing sets, with data augmentation (flipping, blurring, brightness changes) applied to increase robustness.
+  <!-- Dataset -->
+  <div class="mb-12">
+    <h2 class="text-2xl font-semibold text-emerald-700 mb-4">Dataset</h2>
+    <p class="text-gray-700 leading-relaxed">
+      I collected 200+ high-resolution images from <em>Where’s Waldo</em> books and online sources.  
+      Each image was manually annotated using <em>Roboflow</em>, drawing bounding boxes around Waldo.  
+      The dataset was divided into training, validation, and testing sets, with data augmentation (flipping, blurring, brightness changes) applied to increase robustness.
     </p>
+  </div>
 
-    <p>
-      <strong>Model Training:</strong>  
-      I trained two models, <em>YOLOv5</em> and <em>YOLOv8</em>, separately to compare accuracy and inference speed.  
-      - Used transfer learning from pretrained weights.  
-      - Tuned hyperparameters (image size, batch size, learning rate).  
-      - Regular evaluation during training helped prevent overfitting.  
+  <!-- Model Training -->
+  <div class="mb-12">
+    <h2 class="text-2xl font-semibold text-emerald-700 mb-4">Model Training</h2>
+    <p class="text-gray-700 leading-relaxed">
+      I trained two models, <em>YOLOv5</em> and <em>YOLOv8</em>, separately to compare accuracy and inference speed.
+    </p>
+    <ul class="list-disc list-inside space-y-1 text-gray-700">
+      <li>Used transfer learning from pretrained weights.</li>
+      <li>Tuned hyperparameters (image size, batch size, learning rate).</li>
+      <li>Regular evaluation during training helped prevent overfitting.</li>
+    </ul>
+    <p class="text-gray-700 mt-3">
       This experimentation allowed me to balance model precision and performance.
     </p>
+  </div>
 
-    <p>
-      <strong>Challenge of Small Object Detection:</strong>  
-      Waldo often occupied less than 1% of an image, making him difficult for standard object detectors. To address this, I used <em>SAHI (Slicing Aided Hyper Inference)</em>, which slices large images into smaller overlapping tiles. Processing each tile separately improved both recall (finding Waldo) and precision (avoiding false positives).
+  <!-- Challenge of Small Object Detection -->
+  <div class="mb-12">
+    <h2 class="text-2xl font-semibold text-emerald-700 mb-4">Challenge of Small Object Detection</h2>
+    <p class="text-gray-700 leading-relaxed">
+      Waldo often occupied less than 1% of an image, making him difficult for standard object detectors.  
+      To address this, I used <em>SAHI (Slicing Aided Hyper Inference)</em>, which slices large images into smaller overlapping tiles.  
+      Processing each tile separately improved both recall (finding Waldo) and precision (avoiding false positives).
     </p>
+  </div>
 
-    <p>
-      <strong>Results:</strong>  
-      The <em>YOLOv8 + SAHI</em> combination achieved the highest accuracy (mAP) and significantly outperformed YOLOv5 in complex scenes. Even with slicing, inference remained fast enough for near real-time detection.
+  <!-- Results -->
+  <div class="mb-12">
+    <h2 class="text-2xl font-semibold text-emerald-700 mb-4">Results</h2>
+    <p class="text-gray-700 leading-relaxed">
+      The <em>YOLOv8 + SAHI</em> combination achieved the highest accuracy (mAP) and significantly outperformed YOLOv5 in complex scenes.  
+      Even with slicing, inference remained fast enough for near real-time detection.
     </p>
+  </div>
 
-    <!-- Key Learnings -->
-    <div>
-      <strong>Key Learnings:</strong>
-      <ul class="list-disc list-inside mt-2 space-y-2">
-        <li>Why slicing is essential for detecting small objects in large images.</li>
-        <li>How to fine-tune and evaluate deep learning models like YOLOv5 and YOLOv8.</li>
-        <li>Effective dataset annotation and augmentation with Roboflow.</li>
-        <li>Balancing speed and accuracy for real-world applications.</li>
-        <li>Applying object detection to fun but challenging tasks like “Where’s Waldo?”.</li>
-      </ul>
-    </div>
+  <!-- Key Learnings -->
+  <div class="mb-12">
+    <h2 class="text-2xl font-semibold text-emerald-700 mb-4">Key Learnings</h2>
+    <ul class="list-disc list-inside space-y-2 text-gray-700">
+      <li>Why slicing is essential for detecting small objects in large images.</li>
+      <li>How to fine-tune and evaluate deep learning models like YOLOv5 and YOLOv8.</li>
+      <li>Effective dataset annotation and augmentation with Roboflow.</li>
+      <li>Balancing speed and accuracy for real-world applications.</li>
+      <li>Applying object detection to fun but challenging tasks like “Where’s Waldo?”.</li>
+    </ul>
   </div>
 
   <!-- Technologies -->
-  <div class="mt-12">
-    <h2 class="text-2xl font-semibold text-emerald-700 mb-3">Technologies Used</h2>
+  <div>
+    <h2 class="text-2xl font-semibold text-emerald-700 mb-4">Technologies Used</h2>
     <ul class="flex flex-wrap gap-2">
       <li class="bg-emerald-100 text-emerald-800 px-3 py-1 rounded-full text-sm">Python</li>
       <li class="bg-emerald-100 text-emerald-800 px-3 py-1 rounded-full text-sm">PyTorch</li>

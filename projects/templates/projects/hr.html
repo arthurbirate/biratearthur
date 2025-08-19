@@ -2,23 +2,23 @@
 {% load static %}
 
 {% block content %}
-<div class="max-w-5xl mx-auto px-6 py-20 font-serif bg-gradient-to-br from-white via-rose-50 to-pink-50 rounded-xl shadow-md mt-12">
+<div class="max-w-5xl mx-auto px-6 py-20 font-serif bg-gradient-to-br from-white via-emerald-50 to-green-50 rounded-xl shadow-md mt-12">
 
   <!-- Title -->
-  <h1 class="text-4xl font-bold text-rose-800 mb-10 text-center">
-    HR Analytics Dashboard – Power BI
+  <h1 class="text-4xl font-bold text-emerald-800 mb-10 text-center">
+    HR Analytics Dashboard – Personal Project with Microsoft Power BI
   </h1>
 
   <!-- Links -->
   <div class="flex justify-center gap-4 mb-12">
     <a href="https://youtu.be/hjUTKJGK_Hw" target="_blank" 
-       class="bg-rose-600 hover:bg-rose-700 text-white font-semibold px-6 py-2 rounded-lg shadow transition">
-       🔗 View Project
+       class="bg-emerald-600 hover:bg-emerald-700 text-white font-medium px-6 py-2 rounded-lg shadow transition">
+       View Project
     </a>
     {% if project.github_link %}
     <a href="{{ project.github_link }}" target="_blank" 
-       class="bg-emerald-600 hover:bg-emerald-700 text-white font-semibold px-6 py-2 rounded-lg shadow transition">
-       💻 GitHub Repo
+       class="bg-emerald-700 hover:bg-emerald-800 text-white font-medium px-6 py-2 rounded-lg shadow transition">
+       GitHub Repo
     </a>
     {% endif %}
   </div>
@@ -35,59 +35,67 @@
 
   <!-- Objective -->
   <div class="mb-12">
-    <h2 class="text-2xl font-semibold text-rose-700 mb-4">🎯 Objective</h2>
+    <h2 class="text-2xl font-semibold text-emerald-800 mb-4">Objective</h2>
     <p class="text-gray-700 leading-relaxed">
-      The goal was to design and implement a <strong>multi-page HR analytics dashboard</strong> in Power BI, 
-      providing a holistic view of the workforce.  
-      It analyzed <em>attrition, compensation, job levels, education levels, and satisfaction metrics</em>, 
-      helping organizations drive <strong>workforce planning, retention strategies, and pay equity monitoring</strong>.
+      This was a personal project where I set out to design and implement a multi-page HR analytics dashboard in Microsoft Power BI.  
+      The objective was to create an end-to-end reporting solution that provided a holistic view of the workforce and could simulate the type of dashboard an HR department might use.  
+      The dashboard analyzed multiple dimensions of human resources, including employee attrition, compensation, job levels, education levels, and employee satisfaction.  
+      By doing so, it demonstrated how organizations can use data-driven insights to strengthen workforce planning, improve retention strategies, and monitor pay equity across roles and departments.
     </p>
   </div>
 
   <!-- Dataset -->
   <div class="mb-12">
-    <h2 class="text-2xl font-semibold text-rose-700 mb-4">📊 Dataset</h2>
-    <p class="text-gray-700 mb-3">The structured HR dataset included:</p>
-    <ul class="list-disc list-inside space-y-1 text-gray-700">
-      <li><strong>Employee Info:</strong> IDs, roles, departments, job levels, education.</li>
-      <li><strong>Compensation:</strong> salaries, pay bands, daily rates.</li>
-      <li><strong>Attrition:</strong> active vs. exited employees.</li>
-      <li><strong>Survey Data:</strong> employee satisfaction and engagement scores.</li>
+    <h2 class="text-2xl font-semibold text-emerald-800 mb-4">Dataset</h2>
+    <p class="text-gray-700 leading-relaxed">
+      The dataset was structured to represent an organization’s employee records and covered four major categories of information:
+    </p>
+    <ul class="list-disc list-inside space-y-2 text-gray-700 mt-3">
+      <li>Employee details such as IDs, job roles, departments, job levels, and education levels.</li>
+      <li>Compensation data including salaries, daily rates, and pay bands.</li>
+      <li>Attrition data that distinguished between active employees and those who had left the organization.</li>
+      <li>Survey-based metrics covering satisfaction and engagement levels across employees.</li>
     </ul>
-    <p class="text-gray-700 mt-3">
-      The data was cleaned and modeled into fact/dimension tables for smooth filtering by <strong>department, role, level, and education</strong>.
+    <p class="text-gray-700 mt-4">
+      The raw data required cleaning and structuring before use.  
+      It was modeled into fact and dimension tables within Power BI to enable smooth cross-filtering by department, education level, job role, and job band.
     </p>
   </div>
 
   <!-- Results -->
   <div class="mb-12">
-    <h2 class="text-2xl font-semibold text-rose-700 mb-4">📈 Results</h2>
-    <p class="text-gray-700 mb-3">The dashboard delivered insights across four interactive pages:</p>
-    <ul class="list-disc list-inside space-y-1 text-gray-700">
-      <li><strong>HR Overview:</strong> Headcount, attrition rate, salary benchmarks, employee distribution.</li>
-      <li><strong>Compensation:</strong> Salary distributions, pay equity by role, job level, and education.</li>
-      <li><strong>Attrition:</strong> Identified high-turnover departments and roles.</li>
-      <li><strong>Employee Insights:</strong> Drilldowns into demographics, job satisfaction, and engagement patterns.</li>
+    <h2 class="text-2xl font-semibold text-emerald-800 mb-4">Results</h2>
+    <p class="text-gray-700 leading-relaxed">
+      The final dashboard consisted of four interactive pages that provided different perspectives of the workforce:
+    </p>
+    <ul class="list-disc list-inside space-y-2 text-gray-700 mt-3">
+      <li>HR Overview: presented headcount, attrition rate, average daily rate, salary benchmarks, and workforce distribution by gender, department, and education level.</li>
+      <li>Compensation Breakdown: visualized salary ranges, pay band differences, and equity comparisons across job roles, job levels, and education groups.</li>
+      <li>Attrition Insights: highlighted departments and job levels with the highest turnover, revealing that attrition was concentrated among early-career employees with lower education levels.</li>
+      <li>Employee Insights Overview: allowed drilldowns into demographics, job roles, and satisfaction metrics to uncover patterns in engagement and retention risks.</li>
     </ul>
+    <p class="text-gray-700 mt-4">
+      These results simulated how HR professionals could use such a dashboard to identify retention risks, monitor pay equity, and develop workforce strategies based on data rather than assumptions.
+    </p>
   </div>
 
   <!-- Key Learnings -->
   <div class="mb-12">
-    <h2 class="text-2xl font-semibold text-rose-700 mb-4">📚 Key Learnings</h2>
+    <h2 class="text-2xl font-semibold text-emerald-800 mb-4">Key Learnings</h2>
     <ul class="list-disc list-inside space-y-2 text-gray-700">
-      <li>Strengthened <strong>DAX skills</strong> (attrition rate, pay equity, tenure, satisfaction index).</li>
-      <li>Designed <strong>multi-page dashboards</strong> with executive KPIs + drilldowns.</li>
-      <li>Learned workforce insights: how job role, education, and level impact attrition/compensation.</li>
-      <li>Practiced <strong>dashboard storytelling</strong> to guide HR stakeholders.</li>
+      <li>Enhanced technical skills in DAX by building measures for attrition, average tenure, pay equity, and satisfaction index.</li>
+      <li>Learned how to design multi-page dashboards that balance high-level executive KPIs with detailed drilldowns for HR managers.</li>
+      <li>Understood how job roles, education, and job levels influence both attrition and compensation outcomes.</li>
+      <li>Practiced dashboard storytelling, structuring insights to guide decision-makers from a high-level overview down to specific workforce patterns.</li>
     </ul>
   </div>
 
   <!-- Technologies -->
   <div>
-    <h2 class="text-2xl font-semibold text-rose-700 mb-4">🛠️ Technologies Used</h2>
+    <h2 class="text-2xl font-semibold text-emerald-800 mb-4">Technologies Used</h2>
     <ul class="flex flex-wrap gap-2">
-      <li class="bg-rose-100 text-rose-800 px-3 py-1 rounded-full text-sm">Power BI</li>
-      <li class="bg-rose-100 text-rose-800 px-3 py-1 rounded-full text-sm">DAX</li>
+      <li class="bg-emerald-100 text-emerald-800 px-3 py-1 rounded-full text-sm">Power BI</li>
+      <li class="bg-emerald-100 text-emerald-800 px-3 py-1 rounded-full text-sm">DAX</li>
     </ul>
   </div>
 
