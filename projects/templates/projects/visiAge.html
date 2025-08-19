@@ -1,0 +1,93 @@
+{% extends 'main.html' %}
+{% load static %}
+
+{% block content %}
+<div class="max-w-5xl mx-auto px-6 py-20 font-serif bg-gradient-to-br from-white via-emerald-50 to-green-100 rounded-xl shadow-md mt-12">
+
+  <!-- Title -->
+  <h1 class="text-4xl font-bold text-emerald-800 mb-6 text-center">
+    VisiAge – Fall & Cough Detection System for Elderly People (Project 4.0 AI)
+  </h1>
+
+  <!-- Links -->
+  <div class="flex justify-center gap-4 mb-10">
+    {% if project.project_link %}
+    <a href="{{ project.project_link }}" target="_blank" 
+       class="bg-emerald-600 hover:bg-emerald-700 text-white font-semibold px-6 py-2 rounded-lg shadow transition">
+       🔗 View Project
+    </a>
+    {% endif %}
+    <a href="https://github.com/arthurbirate/cough_detection_visi_age" target="_blank" 
+       class="bg-gray-800 hover:bg-gray-900 text-white font-semibold px-6 py-2 rounded-lg shadow transition">
+       💻 GitHub Repo
+    </a>
+  </div>
+
+  <!-- Images -->
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
+    {% if image1 %}
+    <img src="{{ image1.url }}" alt="VisiAge Cough Detection Screenshot" class="rounded-lg shadow">
+    {% endif %}
+    {% if image2 %}
+    <img src="{{ image2.url }}" alt="VisiAge Logo" class="rounded-lg shadow">
+    {% endif %}
+  </div>
+
+  <!-- Objective -->
+  <div class="space-y-6 text-gray-700 leading-relaxed">
+    <p>
+      <strong>Objective:</strong>  
+      The goal of this project was to <strong>develop a comprehensive health monitoring system for elderly individuals</strong> capable of detecting <em>falls</em> and <em>coughing episodes</em> in real time, thereby enhancing personal safety and response times.
+    </p>
+
+    <!-- Team -->
+    <p>
+      <strong>Team Composition:</strong>  
+      A team of 6 members collaborated:
+    </p>
+    <ul class="list-disc list-inside mt-2 space-y-1">
+      <li>2 from App Development</li>
+      <li>2 from CCS Networking</li>
+      <li>2 from Artificial Intelligence (including myself)</li>
+    </ul>
+
+    <!-- My Contribution -->
+    <p>
+      <strong>My Contribution – Cough Detection Module:</strong>  
+      As part of the AI team, I was fully responsible for developing the cough detection component:
+    </p>
+    <ul class="list-disc list-inside mt-2 space-y-1">
+      <li>Used iPhone and laptop microphones to collect real-world cough & background audio samples.</li>
+      <li>Applied signal processing techniques to extract features such as <strong>MFCCs</strong>.</li>
+      <li>Fine-tuned a <strong>pre-trained XGBoost model</strong> for recognizing cough patterns.</li>
+      <li>Ensured <strong>real-time performance</strong> via optimized preprocessing and integration with system interface.</li>
+    </ul>
+
+    <!-- Key Learnings -->
+    <p>
+      <strong>Key Learnings:</strong>
+    </p>
+    <ul class="list-disc list-inside mt-2 space-y-2">
+      <li>Practical expertise in <strong>real-time audio analysis</strong> using consumer devices.</li>
+      <li>Experience applying <strong>XGBoost</strong> to healthcare-related problems.</li>
+      <li>Strengthened <strong>interdisciplinary collaboration</strong> across AI, networking, and app development teams.</li>
+    </ul>
+  </div>
+
+  <!-- Technologies -->
+  <div class="mt-12">
+    <h2 class="text-2xl font-semibold text-emerald-700 mb-3">Technologies Used</h2>
+    <ul class="flex flex-wrap gap-2">
+      <li class="bg-emerald-100 text-emerald-800 px-3 py-1 rounded-full text-sm">Python</li>
+      <li class="bg-emerald-100 text-emerald-800 px-3 py-1 rounded-full text-sm">XGBoost</li>
+      <li class="bg-emerald-100 text-emerald-800 px-3 py-1 rounded-full text-sm">Librosa</li>
+      <li class="bg-emerald-100 text-emerald-800 px-3 py-1 rounded-full text-sm">MFCC</li>
+      <li class="bg-emerald-100 text-emerald-800 px-3 py-1 rounded-full text-sm">scikit-learn</li>
+      <li class="bg-emerald-100 text-emerald-800 px-3 py-1 rounded-full text-sm">CoreAudio</li>
+      <li class="bg-emerald-100 text-emerald-800 px-3 py-1 rounded-full text-sm">iPhone & Laptop Microphones</li>
+      <li class="bg-emerald-100 text-emerald-800 px-3 py-1 rounded-full text-sm">Real-time Audio Streaming</li>
+    </ul>
+  </div>
+
+</div>
+{% endblock %}

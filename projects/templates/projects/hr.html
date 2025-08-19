@@ -1,0 +1,96 @@
+{% extends 'main.html' %}
+{% load static %}
+
+{% block content %}
+<div class="max-w-5xl mx-auto px-6 py-20 font-serif bg-gradient-to-br from-white via-rose-50 to-pink-50 rounded-xl shadow-md mt-12">
+
+  <!-- Title -->
+  <h1 class="text-4xl font-bold text-rose-800 mb-6 text-center">
+    HR Analytics Dashboard – Power BI
+  </h1>
+
+  <!-- Links as Buttons -->
+  <div class="flex justify-center gap-4 mb-10">
+    <a href="https://youtu.be/hjUTKJGK_Hw" target="_blank" 
+       class="bg-rose-600 hover:bg-rose-700 text-white font-semibold px-6 py-2 rounded-lg shadow transition">
+       🔗 View Project
+    </a>
+    {% if project.github_link %}
+    <a href="{{ project.github_link }}" target="_blank" 
+       class="bg-emerald-600 hover:bg-emerald-700 text-white font-semibold px-6 py-2 rounded-lg shadow transition">
+       💻 GitHub Repo
+    </a>
+    {% endif %}
+  </div>
+
+  <!-- Images -->
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
+    {% if image1 %}
+    <img src="{{ image1.url }}" alt="HR Dashboard Screenshot 1" class="rounded-lg shadow">
+    {% endif %}
+    {% if image2 %}
+    <img src="{{ image2.url }}" alt="HR Dashboard Screenshot 2" class="rounded-lg shadow">
+    {% endif %}
+  </div>
+
+  <!-- Objective -->
+  <div class="space-y-6 text-gray-700 leading-relaxed">
+    <p>
+      <strong>Objective:</strong>  
+      The goal of this project was to design and implement a <strong>multi-page HR analytics dashboard</strong> in Microsoft Power BI, providing a holistic view of the workforce.  
+      The dashboard analyzed dimensions such as <em>attrition, compensation, job levels, education levels, and satisfaction metrics</em>, simulating how organizations can use data-driven insights for <strong>workforce planning, retention strategies, and pay equity monitoring</strong>.
+    </p>
+
+    <!-- Dataset -->
+    <p>
+      <strong>Dataset:</strong>  
+      A structured HR dataset representing employee records was used, including:
+    </p>
+    <ul class="list-disc list-inside mt-2 space-y-1">
+      <li><strong>Employee Information:</strong> IDs, job roles, departments, job levels, education levels.</li>
+      <li><strong>Compensation Data:</strong> salaries, daily rates, pay bands.</li>
+      <li><strong>Attrition Data:</strong> active vs. exited employees, lifecycle tracking.</li>
+      <li><strong>Survey Metrics:</strong> employee satisfaction and engagement scores.</li>
+    </ul>
+    <p>
+      The dataset was cleaned and modeled into fact and dimension tables, enabling smooth filtering across dimensions like <strong>department, education level, job role, and job band</strong>.
+    </p>
+
+    <!-- Results -->
+    <p>
+      <strong>Results:</strong>  
+      The dashboard delivered HR insights through four interactive pages:
+    </p>
+    <ul class="list-disc list-inside mt-2 space-y-1">
+      <li><strong>HR Overview:</strong> Headcount, attrition rate, salary benchmarks, employee distribution by gender, department, and education.</li>
+      <li><strong>Compensation Breakdown:</strong> Salary distributions, pay band differences, equity across roles, job levels, and education.</li>
+      <li><strong>Attrition Insights:</strong> Highlighted departments and levels with highest turnover (common among early-career, lower-education employees).</li>
+      <li><strong>Employee Insights Overview:</strong> Drilldowns into demographics, job roles, and satisfaction metrics to uncover engagement patterns.</li>
+    </ul>
+    <p>
+      These insights simulated how HR teams can identify <strong>retention risks, monitor pay equity, and strengthen leadership pipelines</strong>.
+    </p>
+
+    <!-- Key Learnings -->
+    <div>
+      <strong>Key Learnings:</strong>
+      <ul class="list-disc list-inside mt-2 space-y-2">
+        <li>Improved <strong>DAX skills</strong> by creating measures for attrition rate, tenure, satisfaction index, and pay equity.</li>
+        <li>Learned to design <strong>multi-page dashboards</strong> balancing executive KPIs with detailed drilldowns for HR managers.</li>
+        <li>Understood workforce patterns: how job role, education, and level impact attrition and compensation.</li>
+        <li>Practiced <strong>dashboard storytelling</strong> to guide stakeholders from high-level KPIs to employee-level insights.</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Technologies -->
+  <div class="mt-12">
+    <h2 class="text-2xl font-semibold text-rose-700 mb-3">Technologies Used</h2>
+    <ul class="flex flex-wrap gap-2">
+      <li class="bg-rose-100 text-rose-800 px-3 py-1 rounded-full text-sm">Power BI</li>
+      <li class="bg-rose-100 text-rose-800 px-3 py-1 rounded-full text-sm">DAX</li>
+    </ul>
+  </div>
+
+</div>
+{% endblock %}

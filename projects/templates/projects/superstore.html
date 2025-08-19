@@ -1,0 +1,109 @@
+{% extends 'main.html' %}
+{% load static %}
+
+{% block content %}
+<div class="max-w-5xl mx-auto px-6 py-20 font-serif bg-gradient-to-br from-white via-yellow-50 to-amber-50 rounded-xl shadow-md mt-12">
+
+  <!-- Title -->
+  <h1 class="text-4xl font-bold text-amber-800 mb-6 text-center">
+    Superstore Sales & Shipping Analytics – Power BI
+  </h1>
+
+  <!-- Links as Buttons -->
+  <div class="flex justify-center gap-4 mb-10">
+    <a href="https://youtu.be/RftK98wx4Vw" target="_blank" 
+       class="bg-amber-600 hover:bg-amber-700 text-white font-semibold px-6 py-2 rounded-lg shadow transition">
+       🔗 View Project
+    </a>
+    <a href="https://github.com/arthurbirate/Superstore-Sales-Shipping-Analytics-Personal-Project-On-Microsoft-Power-BI/blob/main/Business%20Intelligence%20Project%20Report%20Superstore%20%20.pdf" target="_blank" 
+       class="bg-emerald-600 hover:bg-emerald-700 text-white font-semibold px-6 py-2 rounded-lg shadow transition">
+       💻 GitHub Repo
+    </a>
+  </div>
+
+  <!-- Images -->
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
+    {% if image1 %}
+    <img src="{{ image1.url }}" alt="Superstore Dashboard Screenshot 1" class="rounded-lg shadow">
+    {% endif %}
+    {% if image2 %}
+    <img src="{{ image2.url }}" alt="Superstore Dashboard Screenshot 2" class="rounded-lg shadow">
+    {% endif %}
+  </div>
+
+  <!-- Objective -->
+  <div class="space-y-6 text-gray-700 leading-relaxed">
+    <p>
+      <strong>Objective:</strong>  
+      The primary objective of this project was to design and implement a complete end-to-end business intelligence solution using Microsoft Power BI.  
+      The dashboard analyzed <strong>sales, profit trends, and shipping performance</strong> using a fictional U.S. retail dataset, while simulating the real-world challenges of retail operations.  
+    </p>
+    <p>
+      The solution was tailored for different stakeholders:
+    </p>
+    <ul class="list-disc list-inside mt-2 space-y-1">
+      <li><strong>Executives:</strong> High-level KPIs and growth metrics.</li>
+      <li><strong>Regional Sales Managers:</strong> Performance comparisons across states and product categories.</li>
+      <li><strong>Supply Chain Teams:</strong> Evaluation of shipping modes and delivery efficiency.</li>
+    </ul>
+    <p>
+      By integrating <strong>interactive visuals, drill-through reports, and custom DAX measures</strong>, the dashboard became a self-service analytics tool empowering business users to explore data without SQL or technical intervention.
+    </p>
+
+    <!-- Dataset -->
+    <p>
+      <strong>Dataset:</strong>  
+      The <em>Superstore dataset</em> was used, containing several years of transactional retail data.  
+      It included:
+    </p>
+    <ul class="list-disc list-inside mt-2 space-y-1">
+      <li><strong>Customer Orders:</strong> order dates, shipping dates, and priorities.</li>
+      <li><strong>Products:</strong> categories and subcategories.</li>
+      <li><strong>Sales & Profit:</strong> discounts, quantities, and margins.</li>
+      <li><strong>Shipping Data:</strong> delivery modes and timelines.</li>
+      <li><strong>Geographic Coverage:</strong> U.S. regions, states, and cities.</li>
+    </ul>
+    <p>
+      This dataset provided a realistic scenario for analyzing how <strong>sales, profitability, and logistics</strong> interact across geographies and product categories.
+    </p>
+
+    <!-- Results -->
+    <p>
+      <strong>Results:</strong>  
+      The final Power BI dashboard delivered a highly interactive and user-friendly solution for analyzing sales, profitability, and shipping at multiple levels.  
+    </p>
+    <ul class="list-disc list-inside mt-2 space-y-1">
+      <li>Dynamic filtering by region, product category, and time period.</li>
+      <li>KPIs such as <em>Total Sales, Profit Margin, Year-over-Year Growth, and Average Shipping Cost</em>.</li>
+      <li>Drill-through reports for product-level and regional analysis.</li>
+      <li>Clear executive overview dashboards alongside operational analytics for managers and supply chain teams.</li>
+    </ul>
+    <p>
+      This combination of broad and detailed insights ensured that the solution supported decision-making at multiple levels.
+    </p>
+
+    <!-- Key Learnings -->
+    <div>
+      <strong>Key Learnings:</strong>
+      <ul class="list-disc list-inside mt-2 space-y-2">
+        <li>Enhanced skills in transforming raw data into clear and impactful business insights.</li>
+        <li>Learned to structure dashboards so critical KPIs are visible upfront, with flexibility for deeper exploration.</li>
+        <li>Applied BI best practices such as hierarchies, bookmarks, tooltips, and conditional formatting.</li>
+        <li>Strengthened ability to deliver engaging, intuitive dashboards for both executives and operational users.</li>
+        <li>Improved storytelling skills through effective visualization and design principles.</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Technologies -->
+  <div class="mt-12">
+    <h2 class="text-2xl font-semibold text-amber-700 mb-3">Technologies Used</h2>
+    <ul class="flex flex-wrap gap-2">
+      <li class="bg-amber-100 text-amber-800 px-3 py-1 rounded-full text-sm">Power BI</li>
+      <li class="bg-amber-100 text-amber-800 px-3 py-1 rounded-full text-sm">DAX</li>
+      <li class="bg-amber-100 text-amber-800 px-3 py-1 rounded-full text-sm">Data Modeling</li>
+    </ul>
+  </div>
+
+</div>
+{% endblock %}
