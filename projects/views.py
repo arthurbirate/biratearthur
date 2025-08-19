@@ -56,39 +56,39 @@ def project1_detail(request):
     return render(request, "projects/waldo.html", {
         "image1": project.image1,
         "image2": project.image2,
-        "project": project,  # in case you want links too
+        "project": project, 
     })
 
-# Project 2 - HR Analytics Dashboard
+# Project 5 - HR Analytics Dashboard
 def project2_detail(request):
-    project = get_object_or_404(Project, id=2)
+    project = get_object_or_404(Project, id=5)
     return render(request, "projects/hr.html", {
         "image1": project.image1,
         "image2": project.image2,
         "project": project,
     })
 
-# Project 3 - VisiAge
+# Project 2 - VisiAge
 def project3_detail(request):
-    project = get_object_or_404(Project, id=3)
+    project = get_object_or_404(Project, id=2)
     return render(request, "projects/visiAge.html", {
         "image1": project.image1,
         "image2": project.image2,
         "project": project,
     })
 
-# Project 4 - Olympics Dashboard
+# Project 3 - Olympics Dashboard
 def project4_detail(request):
-    project = get_object_or_404(Project, id=4)
+    project = get_object_or_404(Project, id=3)
     return render(request, "projects/olympic.html", {
         "image1": project.image1,
         "image2": project.image2,
         "project": project,
     })
 
-# Project 5 - Superstore Analytics
+# Project 4 - Superstore Analytics
 def project5_detail(request):
-    project = get_object_or_404(Project, id=5)
+    project = get_object_or_404(Project, id=4)
     return render(request, "projects/superstore.html", {
         "image1": project.image1,
         "image2": project.image2,
