@@ -35,17 +35,19 @@
   <div class="mb-12">
     <h2 class="text-2xl font-semibold text-emerald-700 mb-4">Objective</h2>
     <p class="text-gray-700 leading-relaxed">
-        The objective of this project was to design and implement an artificial intelligence system that can automatically detect and locate <strong>Waldo</strong> in highly complex, cluttered images from the popular “Where’s Waldo?” puzzle books. Unlike traditional classification tasks, this problem involves object detection in a visually challenging setting:
+        The objective of this project was to design and implement an artificial intelligence system that can automatically detect and locate Waldo in highly complex, cluttered images from the popular “Where’s Waldo?” puzzle books. 
+        Unlike traditional classification tasks, this problem involves object detection in a visually challenging setting.
       </p>
       
-      <ul class="text-gray-700 leading-relaxed list-disc pl-12">
-        <li><strong>High visual clutter:</strong> Each image contains hundreds of characters, objects, and patterns, many of which resemble Waldo’s iconic red-and-white outfit.</li>
-        <li><strong>Small target size:</strong> Waldo is typically a very small figure compared to the overall image, making detection more difficult.</li>
-        <li><strong>Distractors:</strong> The presence of lookalike characters and distracting backgrounds increases the challenge for both humans and machine learning models.</li>
+      <ul class="text-gray-700 leading-relaxed list-disc ml-8 space-y-2">
+        <li>High visual clutter: Each image contains hundreds of characters, objects, and patterns, many of which resemble Waldo’s red-and-white outfit.</li>
+        <li>Small target size: Waldo is typically a very small figure compared to the overall image, making detection more difficult.</li>
+        <li>Distractors: The presence of lookalike characters and distracting backgrounds increases the challenge for both humans and machine learning models.</li>
       </ul>
       
-      <p class="text-gray-700 leading-relaxed">
-        The project’s goal was to overcome these difficulties by applying <strong>YOLOv5</strong> and <strong>YOLOv8</strong>, two advanced deep learning models specialized in real-time object detection. The models were trained on a custom dataset of labeled Waldo images to teach the system to distinguish Waldo from other characters and accurately predict his position within new, unseen puzzle images.
+      <p class="text-gray-700 leading-relaxed mt-4">
+        The project’s goal was to overcome these difficulties by applying YOLOv5 and YOLOv8, two advanced deep learning models specialized in real-time object detection. 
+        The models were trained on a custom dataset of labeled Waldo images to teach the system to distinguish Waldo from other characters and accurately predict his position within new, unseen puzzle images.
       </p>
       
   </div>
@@ -53,14 +55,17 @@
   <!-- Dataset -->
   <div class="mb-12">
     <h2 class="text-2xl font-semibold text-emerald-700 mb-4">Dataset</h2>
-    <p class="text-gray-700 leading-relaxed">
-        I collected over <strong>200 high-resolution images</strong> from <em>Where’s Waldo</em> books and various online sources to build a custom dataset tailored for this project. Each image was carefully <strong>manually annotated</strong> using Roboflow, where bounding boxes were drawn around Waldo to create precise labels for the detection model. To ensure reliable training and evaluation, the dataset was divided into <strong>training, validation, and testing sets</strong>. 
+    <p class="text-gray-700 leading-relaxed mt-6">
+        I collected over 200 high-resolution images from “Where’s Waldo?” books and various online sources to build a dataset tailored for this project. 
+        Each image was carefully annotated using Roboflow, where bounding boxes were drawn around Waldo to create precise labels for the detection model. 
+        To ensure reliable training and evaluation, the dataset was divided into training, validation, and testing sets.
       </p>
       
-      <p class="text-gray-700 leading-relaxed">
-        To make the model more <strong>robust and generalizable</strong>, extensive data augmentation techniques were applied. These included <em>image flipping</em> (to simulate different orientations), <em>blurring</em> (to mimic out-of-focus or low-quality images), and <em>brightness adjustments</em> (to handle varying lighting conditions). This preprocessing strategy significantly increased the diversity of the dataset and reduced the risk of overfitting, preparing the model to perform effectively on new and unseen puzzle images.
+      <p class="text-gray-700 leading-relaxed mt-4">
+        To make the model more robust and generalizable, data augmentation techniques were applied. 
+        These included image flipping to simulate different orientations, blurring to mimic out-of-focus or low-quality images, and brightness adjustments to handle varying lighting conditions. 
+        This preprocessing strategy significantly increased the diversity of the dataset and reduced the risk of overfitting, preparing the model to perform effectively on new and unseen puzzle images.
       </p>
-      
   </div>
 
   <!-- Model Training -->
