@@ -2,27 +2,27 @@
 {% load static %}
 
 {% block content %}
-<div class="max-w-5xl mx-auto px-6 py-20 font-serif bg-white rounded-xl shadow-md mt-12">
+<div class="max-w-5xl mx-auto px-6 py-20 font-serif bg-gradient-to-br from-white via-blue-50 to-emerald-50 rounded-xl shadow-md mt-12">
 
   <!-- Title -->
-  <h1 class="text-4xl text-emerald-800 mb-10 text-center">
+  <h1 class="text-4xl font-bold text-emerald-800 mb-10 text-center">
     Superstore Sales & Shipping Analytics – Power BI
   </h1>
 
-  <!-- Links as Buttons -->
+  <!-- Links -->
   <div class="flex justify-center gap-4 mb-12">
     <a href="https://youtu.be/RftK98wx4Vw" target="_blank" 
-       class="inline-block bg-emerald-600 hover:bg-emerald-700 text-white px-6 py-2 rounded-lg shadow transition">
-       🔗 View Project
+       class="bg-emerald-600 hover:bg-emerald-700 text-white font-semibold px-6 py-2 rounded-lg shadow transition">
+       View Project
     </a>
     <a href="https://github.com/arthurbirate/Superstore-Sales-Shipping-Analytics-Personal-Project-On-Microsoft-Power-BI/blob/main/Business%20Intelligence%20Project%20Report%20Superstore%20%20.pdf" target="_blank" 
-       class="inline-block bg-emerald-600 hover:bg-emerald-700 text-white px-6 py-2 rounded-lg shadow transition">
-       💻 GitHub Repo
+       class="bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-2 rounded-lg shadow transition">
+       Documentation
     </a>
   </div>
 
   <!-- Images -->
-  <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-16">
     {% if image1 %}
     <img src="{{ image1.url }}" alt="Superstore Dashboard Screenshot 1" class="rounded-lg shadow">
     {% endif %}
@@ -31,68 +31,78 @@
     {% endif %}
   </div>
 
-  <!-- Content -->
-  <div class="space-y-6 text-gray-700 leading-relaxed">
-
-    <p>
-      The main goal of this project was to design a complete <em>business intelligence solution</em> using Microsoft Power BI 
-      to analyze sales, profit trends, and shipping performance.  
-      The dashboard was built to provide insights for different stakeholders — from executives to regional managers 
-      and supply chain teams — simulating real-world retail decision-making.
+  <!-- Objective -->
+  <div class="mb-12">
+    <h2 class="text-2xl font-semibold text-emerald-700 mb-4">Objective</h2>
+    <p class="text-gray-700 leading-relaxed">
+      This personal project aimed to build a complete <em>business intelligence solution</em> using Microsoft Power BI. 
+      The goal was to analyze sales, profit, and shipping performance using a real-world dataset. 
+      The dashboard provides useful information for different users, such as executives, sales managers, and supply chain teams. 
+      The project also helped to improve skills in data analysis, visualization, and dashboard design.
     </p>
+  </div>
 
-    <p>
-      <span class="text-emerald-700">Dataset:</span>  
-      The project used the well-known <em>Superstore dataset</em>, which contains several years of transactional retail data, including:
+  <!-- Dataset -->
+  <div class="mb-12">
+    <h2 class="text-2xl font-semibold text-emerald-700 mb-4">Dataset</h2>
+    <p class="text-gray-700 leading-relaxed">
+      The project used the <em>Superstore dataset</em>, a sample retail dataset with several years of U.S. sales data:
     </p>
-    <ul class="list-disc list-inside mt-2 space-y-1">
-      <li>Customer orders with order dates, shipping dates, and priorities.</li>
-      <li>Product categories and subcategories.</li>
-      <li>Sales, discounts, quantities, and profit margins.</li>
-      <li>Shipping data with delivery modes and timelines.</li>
-      <li>Geographic breakdowns of regions, states, and cities across the U.S.</li>
+    <ul class="list-disc list-inside pl-6 space-y-2 text-gray-700 mt-3">
+      <li>Customer orders with dates, shipping priorities, and delivery times</li>
+      <li>Product categories and subcategories</li>
+      <li>Sales, discounts, quantities, and profit margins</li>
+      <li>Shipping information including modes and delays</li>
+      <li>Geographical data by region, state, and city</li>
     </ul>
+  </div>
 
-    <p>
-      <span class="text-emerald-700">Process:</span>  
-      - Cleaned and structured the dataset for analytics.  
-      - Created data models and relationships inside Power BI.  
-      - Designed dashboards tailored for different users: executives, sales managers, and supply chain teams.  
-      - Built DAX measures to calculate KPIs like total sales, profit margins, YoY growth, and shipping efficiency.  
-      - Integrated interactive visuals, drill-through reports, hierarchies, and filters for intuitive navigation.  
-    </p>
-
-    <p>
-      <span class="text-emerald-700">Results:</span>  
-      The final dashboard offered an end-to-end BI solution with clear visual storytelling and actionable insights:
-    </p>
-    <ul class="list-disc list-inside mt-2 space-y-1">
-      <li>Dynamic filtering by region, product category, and time period.</li>
-      <li>KPIs including Total Sales, Profit Margin, YoY Growth, and Average Shipping Cost.</li>
-      <li>Executive overview dashboards alongside drill-through operational analytics.</li>
-      <li>Improved decision-making for both strategic and day-to-day business use.</li>
+  <!-- Process -->
+  <div class="mb-12">
+    <h2 class="text-2xl font-semibold text-emerald-700 mb-4">Process</h2>
+    <ul class="list-disc list-inside pl-6 space-y-2 text-gray-700">
+      <li>Cleaned and organized the dataset for analysis</li>
+      <li>Created data models in Power BI</li>
+      <li>Designed dashboards for executives, sales managers, and supply chain teams</li>
+      <li>Created DAX measures to calculate key metrics (sales, profit margin, shipping efficiency)</li>
+      <li>Built interactive visuals, drill-through reports, and hierarchies for easy navigation</li>
     </ul>
+  </div>
 
-    <!-- Key Learnings -->
-    <div>
-      <span class="text-emerald-700">Key Learnings:</span>
-      <ul class="list-disc list-inside mt-2 space-y-2">
-        <li>How to transform raw datasets into clear, actionable insights.</li>
-        <li>Best practices in BI dashboard design — visibility of KPIs upfront with drill-down flexibility.</li>
-        <li>Hands-on experience with DAX, hierarchies, bookmarks, and conditional formatting.</li>
-        <li>Improved storytelling through data visualization for both executives and operational users.</li>
-        <li>Strengthened ability to deliver engaging dashboards that support real-world decision-making.</li>
-      </ul>
-    </div>
+  <!-- Results -->
+  <div class="mb-12">
+    <h2 class="text-2xl font-semibold text-emerald-700 mb-4">Results</h2>
+    <p class="text-gray-700 leading-relaxed">
+      The final dashboard provided clear insights and supported interactive data exploration:
+    </p>
+    <ul class="list-disc list-inside pl-6 space-y-2 text-gray-700 mt-3">
+      <li>Filter data by region, product category, and time period</li>
+      <li>Key metrics for executives: Total Sales, Profit Margin, Shipping Cost</li>
+      <li>Side-by-side views for high-level overview and detailed operational analysis</li>
+      <li>Improved decision-making for both strategic and operational tasks</li>
+    </ul>
+  </div>
+
+  <!-- Key Learnings -->
+  <div class="mb-12">
+    <h2 class="text-2xl font-semibold text-emerald-700 mb-4">Key Learnings</h2>
+    <ul class="list-disc list-inside pl-6 space-y-2 text-gray-700">
+      <li>How to prepare and structure raw data for analysis</li>
+      <li>Designing dashboards that are clear and easy to use</li>
+      <li>Experience with DAX, hierarchies, bookmarks, and formatting options</li>
+      <li>Creating dashboards for different users, from executives to operational teams</li>
+      <li>Balancing usability with detailed analytical information</li>
+    </ul>
   </div>
 
   <!-- Technologies -->
-  <div class="mt-12">
-    <h2 class="text-2xl text-emerald-700 mb-3">Technologies Used</h2>
+  <div>
+    <h2 class="text-2xl font-semibold text-emerald-700 mb-4">Technologies Used</h2>
     <ul class="flex flex-wrap gap-2">
       <li class="bg-emerald-100 text-emerald-800 px-3 py-1 rounded-full text-sm">Power BI</li>
       <li class="bg-emerald-100 text-emerald-800 px-3 py-1 rounded-full text-sm">DAX</li>
       <li class="bg-emerald-100 text-emerald-800 px-3 py-1 rounded-full text-sm">Data Modeling</li>
+      <li class="bg-emerald-100 text-emerald-800 px-3 py-1 rounded-full text-sm">Data Visualization</li>
     </ul>
   </div>
 
