@@ -12,11 +12,11 @@
   <!-- Links -->
   <div class="flex justify-center gap-4 mb-10">
     <a href="https://youtu.be/UKvdi1y1dJQ" target="_blank" 
-       class="bg-indigo-600 hover:bg-indigo-700 text-white font-semibold px-6 py-2 rounded-lg shadow transition">
+       class="bg-indigo-600 hover:bg-indigo-700 text-white font-medium px-6 py-2 rounded-lg shadow transition">
        🔗 View Project
     </a>
     <a href="https://github.com/arthurbirate/Olympic-Games-Qlik-sense/blob/main/OlympicGames%20functional%20specification.pdf" target="_blank" 
-       class="bg-emerald-600 hover:bg-emerald-700 text-white font-semibold px-6 py-2 rounded-lg shadow transition">
+       class="bg-emerald-600 hover:bg-emerald-700 text-white font-medium px-6 py-2 rounded-lg shadow transition">
        💻 GitHub Repo
     </a>
   </div>
@@ -34,15 +34,15 @@
   <!-- Objective -->
   <h2 class="text-2xl font-semibold text-indigo-700 mb-3">Objective</h2>
   <p class="text-gray-700 leading-relaxed mb-6">
-    The goal of this project was to design an intuitive and interactive Qlik Sense dashboard that allows users to explore Olympic Games data from 1980 to 2022.  
-    The dashboard focused on deeper insights beyond medal counts, including:
+    The goal of this project was to design an interactive Qlik Sense dashboard that explores Olympic Games data from 1980 to 2022.  
+    The dashboard highlights insights such as:
   </p>
   <ul class="list-disc list-inside text-gray-700 space-y-1 mb-8">
-    <li>Trends in medal distribution by country and sport.</li>
-    <li>Gender performance – comparing male and female athlete participation and success.</li>
-    <li>Sport-specific breakdowns with drill-through capabilities.</li>
-    <li>Athlete achievements with individual profiles and medal history.</li>
-    <li>Age and gender dynamics across different events.</li>
+    <li>Trends in medal distribution by country and sport</li>
+    <li>Gender performance — male vs female athlete participation and success</li>
+    <li>Sport-specific breakdowns with drill-through capabilities</li>
+    <li>Athlete achievements with individual profiles and medal history</li>
+    <li>Age and gender dynamics across different events</li>
   </ul>
   <p class="text-gray-700 leading-relaxed mb-10">
     Designed as a self-service BI tool for sports fans, journalists, and Olympic committees, it provided both high-level KPIs and detailed drilldowns.
@@ -51,41 +51,41 @@
   <!-- Dataset -->
   <h2 class="text-2xl font-semibold text-indigo-700 mb-3">Dataset</h2>
   <p class="text-gray-700 leading-relaxed mb-4">
-    The dashboard used publicly available Olympic Games data from 1980–2022, covering athletes, medals, countries, sports, and events.  
-    Key preprocessing tasks were handled in Qlik’s load editor:
+    The dashboard used Olympic Games data from 1980–2022, covering athletes, medals, countries, sports, and events.  
+    Preprocessing was handled in Qlik’s load editor:
   </p>
   <ul class="list-disc list-inside text-gray-700 space-y-1 mb-10">
-    <li>Standardized inconsistent country codes (e.g., USSR → Russia).</li>
-    <li>Cleaned duplicate or incomplete athlete records.</li>
-    <li>Reshaped medal data for time-series analysis.</li>
-    <li>Created a star-schema-like model for efficient drill-down performance.</li>
+    <li>Standardized inconsistent country codes (e.g., USSR → Russia)</li>
+    <li>Cleaned duplicate or incomplete athlete records</li>
+    <li>Reshaped medal data for time-series analysis</li>
+    <li>Created a star-schema-like model for efficient drill-down performance</li>
   </ul>
   <p class="text-gray-700 leading-relaxed mb-10">
-    These steps ensured the dashboard could handle large historical datasets while remaining responsive for interactive use.
+    These steps ensured the dashboard could handle large datasets while staying responsive.
   </p>
 
   <!-- Results -->
   <h2 class="text-2xl font-semibold text-indigo-700 mb-3">Results</h2>
   <p class="text-gray-700 leading-relaxed mb-4">
-    The final dashboard delivered a multi-sheet Qlik Sense application combining medal tracking, gender analysis, sport-specific insights, and athlete-level details:
+    The final Qlik Sense application combined medal tracking, gender analysis, sport-specific insights, and athlete-level details:
   </p>
   <ul class="list-disc list-inside text-gray-700 space-y-1 mb-10">
-    <li><strong>Dynamic Medal Tracking:</strong> Filtering by year, country, gender, or sport.</li>
-    <li><strong>Gender Performance:</strong> Showed the steady rise of female participation and medal wins since the 1980s.</li>
-    <li><strong>Sport-Specific Trends:</strong> Identified shifts in dominance across athletics, swimming, and gymnastics.</li>
-    <li><strong>Athlete Achievements:</strong> Profiles displaying medal totals and histories of legendary Olympians.</li>
-    <li><strong>Age Dynamics:</strong> Patterns showing younger athletes excel in gymnastics/sprints, older athletes in endurance sports.</li>
+    <li>Dynamic medal tracking with filters for year, country, gender, and sport</li>
+    <li>Gender analysis showing the steady rise of female participation since the 1980s</li>
+    <li>Sport-specific trends highlighting shifts in dominance across athletics, swimming, and gymnastics</li>
+    <li>Athlete profiles displaying medal totals and career histories</li>
+    <li>Age patterns showing younger athletes excel in gymnastics, older athletes in endurance sports</li>
   </ul>
 
   <!-- Key Learnings -->
   <h2 class="text-2xl font-semibold text-indigo-700 mb-3">Key Learnings</h2>
   <ul class="list-disc list-inside text-gray-700 space-y-2 mb-12">
-    <li>Mastered Qlik load scripting for cleaning, reshaping, and modeling Olympic data.</li>
-    <li>Applied set analysis for advanced filtering and dynamic measures (e.g., medals by gender).</li>
-    <li>Optimized dashboard performance by improving joins and pre-aggregating metrics.</li>
-    <li>Learned to design effective multi-sheet dashboards with summary KPIs and detailed drilldowns.</li>
-    <li>Developed storytelling skills for both casual users and analysts.</li>
-    <li>Built domain expertise in Olympic data – evolving country codes, gender participation, and event growth.</li>
+    <li>Mastered Qlik load scripting for cleaning, reshaping, and modeling data</li>
+    <li>Applied set analysis for advanced filtering and dynamic measures</li>
+    <li>Optimized dashboard performance with efficient joins and pre-aggregation</li>
+    <li>Designed multi-sheet dashboards with summary KPIs and drilldowns</li>
+    <li>Improved storytelling for casual users and analysts alike</li>
+    <li>Developed domain expertise in Olympic data trends and participation</li>
   </ul>
 
   <!-- Technologies -->
