@@ -2,29 +2,24 @@
 {% load static %}
 
 {% block content %}
-<div class="max-w-5xl mx-auto px-6 py-20 font-serif bg-gradient-to-br from-white via-emerald-50 to-green-100 rounded-xl shadow-md mt-12">
+<div class="max-w-5xl mx-auto px-6 py-20 font-serif bg-gradient-to-br from-white via-blue-50 to-emerald-50 rounded-xl shadow-md mt-12">
 
   <!-- Title -->
-  <h1 class="text-4xl font-bold text-emerald-800 mb-6 text-center">
-    VisiAge – Fall & Cough Detection System for Elderly People (Project 4.0 AI)
+  <h1 class="text-4xl font-bold text-emerald-800 mb-10 text-center">
+    VisiAge – Fall & Cough Detection System for Elderly People (Project 4.0, AI)
   </h1>
 
   <!-- Links -->
-  <div class="flex justify-center gap-4 mb-10">
-    {% if project.project_link %}
-    <a href="{{ project.project_link }}" target="_blank" 
-       class="bg-emerald-600 hover:bg-emerald-700 text-white font-semibold px-6 py-2 rounded-lg shadow transition">
-       🔗 View Project
-    </a>
-    {% endif %}
+  <div class="flex justify-center gap-4 mb-12">
+    
     <a href="https://github.com/arthurbirate/cough_detection_visi_age" target="_blank" 
-       class="bg-gray-800 hover:bg-gray-900 text-white font-semibold px-6 py-2 rounded-lg shadow transition">
+       class="bg-emerald-600 hover:bg-emerald-700 text-white font-semibold px-6 py-2 rounded-lg shadow transition">
        💻 GitHub Repo
     </a>
   </div>
 
   <!-- Images -->
-  <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-16">
     {% if image1 %}
     <img src="{{ image1.url }}" alt="VisiAge Cough Detection Screenshot" class="rounded-lg shadow">
     {% endif %}
@@ -33,57 +28,67 @@
     {% endif %}
   </div>
 
-  <!-- Content -->
-  <div class="space-y-6 text-gray-700 leading-relaxed">
-    <p>
-      <strong>Objective:</strong>  
-      The goal of this project was to create a <strong>comprehensive AI-powered health monitoring system</strong> designed for elderly individuals.  
-      It focused on real-time detection of <em>falls</em> and <em>coughing episodes</em> — two critical indicators of health risks — with the aim of improving personal safety and enabling timely response.
+  <!-- Objective -->
+  <div class="mb-12">
+    <h2 class="text-2xl font-semibold text-emerald-700 mb-4">Objective</h2>
+    <p class="text-gray-700 leading-relaxed">
+      The goal of this project was to design a <strong>comprehensive AI-powered health monitoring system</strong> for elderly individuals, 
+      capable of detecting <em>falls</em> and <em>coughing episodes</em> in real time — two critical indicators of health risks.  
+      The system aimed to improve personal safety and enable timely medical response.
     </p>
+  </div>
 
-    <p>
-      <strong>Team Composition:</strong>  
-      A team of 6 members collaborated across different domains:
-    </p>
-    <ul class="list-disc list-inside mt-2 space-y-1">
-      <li>2 members from App Development</li>
-      <li>2 members from CCS Networking</li>
-      <li>2 members from Artificial Intelligence (including myself)</li>
+  <!-- Team Composition -->
+  <div class="mb-12">
+    <h2 class="text-2xl font-semibold text-emerald-700 mb-4">Team Composition</h2>
+    <p class="text-gray-700 leading-relaxed">A cross-disciplinary team of 6 members worked together:</p>
+    <ul class="list-disc list-inside mt-2 space-y-1 text-gray-700">
+      <li>2 members – App Development</li>
+      <li>2 members – CCS Networking</li>
+      <li>2 members – Artificial Intelligence (including my role)</li>
     </ul>
+  </div>
 
-    <p>
-      <strong>My Contribution – Cough Detection Module:</strong>  
-      As part of the AI team, I was fully responsible for developing the <strong>cough detection system</strong>.  
+  <!-- My Contribution -->
+  <div class="mb-12">
+    <h2 class="text-2xl font-semibold text-emerald-700 mb-4">My Contribution – Cough Detection Module</h2>
+    <p class="text-gray-700 leading-relaxed">
+      As part of the AI team, I was responsible for building the <strong>cough detection system</strong>.  
       My tasks included:
     </p>
-    <ul class="list-disc list-inside mt-2 space-y-1">
+    <ul class="list-disc list-inside mt-2 space-y-1 text-gray-700">
       <li>Collected real-world audio data (coughs and background noise) using iPhone and laptop microphones.</li>
-      <li>Processed audio signals and extracted features such as <strong>MFCCs (Mel-Frequency Cepstral Coefficients)</strong>.</li>
-      <li>Fine-tuned a <strong>pre-trained XGBoost model</strong> to classify cough patterns.</li>
-      <li>Optimized the pipeline for <strong>real-time performance</strong> and integrated it with the main monitoring system.</li>
+      <li>Processed audio signals and extracted features with <strong>MFCCs (Mel-Frequency Cepstral Coefficients)</strong>.</li>
+      <li>Fine-tuned a <strong>pre-trained XGBoost model</strong> for cough classification.</li>
+      <li>Optimized the pipeline for <strong>real-time performance</strong> and integrated it with the monitoring system.</li>
     </ul>
+  </div>
 
-    <p>
-      <strong>Results:</strong>  
-      The module successfully detected cough episodes in real time with high precision, working seamlessly with consumer devices (iPhones, laptops). This demonstrated the system’s potential for cost-effective healthcare monitoring in elderly care environments.
+  <!-- Results -->
+  <div class="mb-12">
+    <h2 class="text-2xl font-semibold text-emerald-700 mb-4">Results</h2>
+    <p class="text-gray-700 leading-relaxed">
+      The module successfully detected cough episodes in real time with high precision, 
+      working seamlessly with consumer devices such as iPhones and laptops.  
+      This highlighted the system’s potential for <strong>cost-effective healthcare monitoring</strong> in elderly care environments.
     </p>
+  </div>
 
-    <!-- Key Learnings -->
-    <div>
-      <strong>Key Learnings:</strong>
-      <ul class="list-disc list-inside mt-2 space-y-2">
-        <li>Hands-on experience in <strong>real-time audio signal processing</strong> with consumer devices.</li>
-        <li>Application of <strong>XGBoost</strong> in healthcare-related detection tasks.</li>
-        <li>Practical knowledge of <strong>MFCC feature extraction</strong> for audio classification.</li>
-        <li>Strengthened <strong>interdisciplinary collaboration</strong> across AI, networking, and app development teams.</li>
-        <li>Building systems that balance accuracy with real-time performance for practical deployment.</li>
-      </ul>
-    </div>
+  <!-- Key Learnings -->
+  <div class="mb-12">
+    <h2 class="text-2xl font-semibold text-emerald-700 mb-4">Key Learnings</h2>
+    <ul class="list-disc list-inside mt-2 space-y-2 text-gray-700">
+      <li>Hands-on experience with <strong>real-time audio signal processing</strong> using consumer devices.</li>
+      <li>Application of <strong>XGBoost</strong> in healthcare-related detection tasks.</li>
+      <li>Practical knowledge of <strong>MFCC feature extraction</strong> for audio classification.</li>
+      <li>Enhanced <strong>interdisciplinary collaboration</strong> across AI, networking, and app development teams.</li>
+      <li>Balancing accuracy and real-time performance for real-world healthcare deployment.</li>
+    </ul>
   </div>
 
   <!-- Technologies -->
-  <div class="mt-12">
-    <h2 class="text-2xl font-semibold text-emerald-700 mb-3">Technologies Used</h2>
+  <div>
+    <h2 class="text-2xl font-semibold text-emerald-700 mb-4">Technologies Used</h2>
     <ul class="flex flex-wrap gap-2">
       <li class="bg-emerald-100 text-emerald-800 px-3 py-1 rounded-full text-sm">Python</li>
       <li class="bg-emerald-100 text-emerald-800 px-3 py-1 rounded-full text-sm">XGBoost</li>
